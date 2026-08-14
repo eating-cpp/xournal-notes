@@ -1,0 +1,78 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xetex 2026.4.22)  22 APR 2026 21:06
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**xduts.ins
+(./xduts.ins
+(d:/programs/texlive/2026/texmf-dist/tex/generic/ctex/ctxdocstrip.tex
+(d:/programs/texlive/2026/texmf-dist/tex/latex/l3kernel/l3docstrip.tex
+(d:/programs/texlive/2026/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count28
+\emptyLines=\count29
+\processedLines=\count30
+\commentsRemoved=\count31
+\commentsPassed=\count32
+\codeLinesPassed=\count33
+\TotalprocessedLines=\count34
+\TotalcommentsRemoved=\count35
+\TotalcommentsPassed=\count36
+\TotalcodeLinesPassed=\count37
+\NumberOfFiles=\count38
+\inFile=\read1
+\inputcheck=\read2
+\@tempcnta=\count39
+\off@0=\count40
+\off@1=\count41
+\off@2=\count42
+\off@3=\count43
+\off@4=\count44
+\off@5=\count45
+\off@6=\count46
+\off@7=\count47
+\off@8=\count48
+\off@9=\count49
+\off@10=\count50
+\off@11=\count51
+\off@12=\count52
+\off@13=\count53
+\off@14=\count54
+\off@15=\count55
+\@temptokena=\toks13
+\@maxfiles=\count56
+\@maxoutfiles=\count57
+
+Utility: `docstrip' v2.6c <2024-12-23>
+English documentation    <2025-09-23>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)))
+
+Generating file(s) xdufont.sty xduugtp.cls xduugthesis.cls xdupgthesis.cls 
+\openout0 = `xdufont.sty'.
+
+\openout1 = `xduugtp.cls'.
+
+\openout2 = `xduugthesis.cls'.
+
+\openout3 = `xdupgthesis.cls'.
+
+
+Processing file xduts.dtx (sty,xdufont) -> xdufont.sty
+                          (class,tp,xduugtp) -> xduugtp.cls
+                          (class,thesis,xduugthesis) -> xduugthesis.cls
+                          (class,thesis,xdupgthesis) -> xdupgthesis.cls
+Lines  processed: 8200
+Comments removed: 4434
+Comments  passed: 0
+Codelines passed: 3638
+
+ )
+No pages of output.

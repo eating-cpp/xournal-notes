@@ -1,0 +1,45 @@
+\documentclass{xduugthesis}
+\usepackage{booktabs}
+\usepackage{amsfonts}  % 支持\mathbb命令
+\usepackage{amsmath}   % 数学公式环境
+\usepackage{amssymb}   % 数学符号扩展
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\xdusetup{
+  info = {
+    title = {基于3D 高斯泼溅的视觉导航\\算法实现与优化},
+    author = {李钰杰},
+    department = {计算机科学与技术学院},
+    major = {计算机科学与技术},
+    class-id = {2203019},
+    student-id = {22009200957},
+    supervisor = {毋芳芳},
+    bib-resource = {ref.bib},
+    abstract = {chapters/abstract_zh.tex},
+    abstract* = {chapters/abstract_en.tex},
+    keywords = {3D 高斯泼溅,语义增强,实例图级图像目标导航,图像扭曲},
+    keywords* = {3D Gaussian Splating,Semantic Enhancement,Instance ImageGoal Navigation,Image Warping},
+    acknowledgements = {chapters/acknowledge.tex}
+    }
+  }
+\begin{document}
+
+% 临时解决\cite{}没有自动补全提示的问题
+% 详见 https://github.com/note286/xduts/discussions/157
+% \iffalse
+%   \addbibresource{ref.bib}
+% \fi
+% \addbibresource{ref.bib}
+
+
+\include{chapters/intro}
+
+\include{chapters/preknowledge}
+
+\include{chapters/method}
+
+\include{chapters/experiment}
+
+\include{chapters/conclusion}
+
+
+\end{document}

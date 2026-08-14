@@ -1,0 +1,280 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{cheng2022learning,krantz2022sim,zhang2022generative,lin2022multimodal,qiao2023hop+,cai2021pose,lin2021adversarial,an2024etpnav,wu2023human,wang2020vision,wang2023learning,wang2022towards}
+\citation{xia2018gibson,yadav2023habitat,chang2017matterport3d}
+\citation{szot2022habitat,kolve2017ai2,savva2019habitat}
+\citation{krantz2022instancespecific}
+\citation{krantz2023navigating,bono2023endtoend,lei2024instanceaware}
+\citation{chaplot2020learning,chaplot2020object,krantz2023navigating,ramakrishnan2022poni,al2022zero,ma2022end,lei2024instanceaware}
+\@writefile{toc}{\contentsline {section}{\numberline {I}引言}{1}{section.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 实例图像目标导航(IIN)示意图。该任务要求智能体导航至目标图像所描绘的物体实例，同时将其与其他视觉相似的实例区分开来。 }}{1}{figure.1}\protected@file@percent }
+\newlabel{fig:intro}{{1}{1}{实例图像目标导航(IIN)示意图。该任务要求智能体导航至目标图像所描绘的物体实例，同时将其与其他视觉相似的实例区分开来。}{figure.1}{}}
+\newlabel{fig:intro@cref}{{[figure][1][]1}{[1][1][]1}{}{}{}}
+\citation{mildenhall2020nerf}
+\citation{kerbl3Dgaussians}
+\citation{he2017mask,wang2023internimage}
+\citation{kerbl3Dgaussians}
+\citation{lei2024instanceaware}
+\citation{yadav2023habitat}
+\citation{mildenhall2020nerf}
+\citation{fridovich2022plenoxels,liu2020neural,sun2022direct}
+\citation{muller2022instant}
+\citation{kerbl3Dgaussians}
+\citation{chen2024survey}
+\citation{luiten2023dynamic,wu20234dgaussians,yang2023deformable3dgs}
+\citation{feng2024gaussian,xie2023physgaussian,guedon2023sugar}
+\citation{keetha2023splatam,matsuki2023gaussian,yugay2023gaussianslam}
+\citation{majumdar2022zson,chaplot2020object,wang2024find,chang2020semantic,chaplot2021seal}
+\citation{chen2022learning,wani2020multion,schmalstieg2022learning,marza2023multi}
+\citation{al2022zero,choi2021image,yadav2023ovrl,yadav2023offline,Kwon_2023_CVPR,Chaplot_2020_CVPR,savinov2018semi,TSGM,wasserman2022lastmile}
+\citation{krantz2023navigating,bono2023endtoend,lei2024instanceaware}
+\@writefile{toc}{\contentsline {section}{\numberline {II}相关工作}{2}{section.2}\protected@file@percent }
+\citation{al2022zero,majumdar2022zson,yadav2023offline,zhu2017target}
+\citation{choi2021image}
+\citation{yadav2023offline}
+\citation{savinov2018semi,mezghan2022memory,wu2019bayesian}
+\citation{Chaplot_2020_CVPR}
+\citation{hahn2021no,shah2021rapid}
+\citation{wasserman2022lastmile}
+\citation{chaplot2020object}
+\citation{gadre2023cows}
+\citation{gervet2023navigating}
+\citation{liu2023bird,chaplot2020object,krantz2023navigating,lei2024instanceaware}
+\citation{Chaplot_2020_CVPR,TSGM,Kwon_2023_CVPR}
+\citation{chaplot2021seal,zhang20233d,tan2024self,liu2024volumetric}
+\citation{kerbl3Dgaussians}
+\citation{krantz2023navigating}
+\citation{bono2023endtoend}
+\citation{lei2024instanceaware}
+\citation{krantz2023navigating,lei2024instanceaware}
+\citation{bono2023endtoend}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 框架总览。在场景的第一个回合中，智能体使用前沿探索收集未知环境的观测数据，构建语义高斯地图。在后续回合中，高斯导航模块利用预构建的语义高斯地图定位目标物体并引导智能体向其移动。}}{3}{figure.2}\protected@file@percent }
+\newlabel{fig:framework_overview}{{2}{3}{框架总览。在场景的第一个回合中，智能体使用前沿探索收集未知环境的观测数据，构建语义高斯地图。在后续回合中，高斯导航模块利用预构建的语义高斯地图定位目标物体并引导智能体向其移动。}{figure.2}{}}
+\newlabel{fig:framework_overview@cref}{{[figure][2][]2}{[1][3][]3}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 探索地图与障碍物地图。}}{3}{figure.3}\protected@file@percent }
+\newlabel{fig:exp_obs_map}{{3}{3}{探索地图与障碍物地图。}{figure.3}{}}
+\newlabel{fig:exp_obs_map@cref}{{[figure][3][]3}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}方法}{3}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}概述}{3}{subsection.3.1}\protected@file@percent }
+\citation{yamauchi1997frontier,holz2010evaluating}
+\citation{julia2012comparison}
+\citation{kerbl3Dgaussians}
+\citation{kerbl3Dgaussians}
+\citation{kerbl3Dgaussians}
+\citation{kerbl3Dgaussians}
+\citation{he2017mask}
+\citation{keetha2023splatam}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}前沿探索}{4}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}语义高斯构建}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{eq:gauss}{{2}{4}{语义高斯构建}{equation.2}{}}
+\newlabel{eq:gauss@cref}{{[equation][2][]2}{[1][4][]4}{}{}{}}
+\citation{yadav2023habitat}
+\citation{5206848}
+\citation{He2015}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 语义高斯构建示意图。在时间步$t$，流水线通过稠密化和更新步骤优化$t-1$时刻的高斯，这涉及将渲染的RGB和深度图像与当前输入的训练视图进行比较。同时，使用分割图像为稠密化后的高斯分配语义标签。最后，通过可微渲染对高斯进行精调。}}{5}{figure.4}\protected@file@percent }
+\newlabel{fig:gauss_construct}{{4}{5}{语义高斯构建示意图。在时间步$t$，流水线通过稠密化和更新步骤优化$t-1$时刻的高斯，这涉及将渲染的RGB和深度图像与当前输入的训练视图进行比较。同时，使用分割图像为稠密化后的高斯分配语义标签。最后，通过可微渲染对高斯进行精调。}{figure.4}{}}
+\newlabel{fig:gauss_construct@cref}{{[figure][4][]4}{[1][5][]5}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 高斯导航示意图。我们的方法首先使用预构建的语义高斯地图对目标图像进行分类。在确定预测类别后，我们围绕属于该类别的实例生成描述性图像。然后将这些图像与目标物体进行匹配，以识别并定位目标实例。利用地图和确定的目标，智能体采用路径规划算法计算动作序列。}}{5}{figure.5}\protected@file@percent }
+\newlabel{fig:main}{{5}{5}{高斯导航示意图。我们的方法首先使用预构建的语义高斯地图对目标图像进行分类。在确定预测类别后，我们围绕属于该类别的实例生成描述性图像。然后将这些图像与目标物体进行匹配，以识别并定位目标实例。利用地图和确定的目标，智能体采用路径规划算法计算动作序列。}{figure.5}{}}
+\newlabel{fig:main@cref}{{[figure][5][]5}{[1][5][]5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}高斯导航}{5}{subsection.3.4}\protected@file@percent }
+\citation{tyszkiewicz2020disk}
+\citation{lindenberger2023lightglue}
+\citation{krantz2022instancespecific}
+\citation{yadav2023ovrl}
+\citation{yadav2023ovrl}
+\citation{sun2024fgprompt}
+\citation{wani2020multion}
+\citation{marza2023multi}
+\citation{chen2022learning}
+\citation{krantz2023navigating}
+\citation{lei2024instanceaware}
+\citation{lei2024instanceaware}
+\citation{krantz2023navigating}
+\citation{lei2024instanceaware}
+\citation{lei2024instanceaware}
+\citation{yadav2023habitat}
+\citation{anderson2018evaluation}
+\citation{szot2022habitat}
+\citation{yadav2023habitat}
+\citation{krantz2022instancespecific}
+\newlabel{equ:NVS0}{{8}{6}{高斯导航}{equation.8}{}}
+\newlabel{equ:NVS0@cref}{{[equation][8][]8}{[1][6][]6}{}{}{}}
+\newlabel{equ:NVS1}{{9}{6}{高斯导航}{equation.9}{}}
+\newlabel{equ:NVS1@cref}{{[equation][9][]9}{[1][6][]6}{}{}{}}
+\newlabel{equ:NVS2}{{10}{6}{高斯导航}{equation.10}{}}
+\newlabel{equ:NVS2@cref}{{[equation][10][]10}{[1][6][]6}{}{}{}}
+\newlabel{eq:match}{{12}{6}{高斯导航}{equation.12}{}}
+\newlabel{eq:match@cref}{{[equation][12][]12}{[1][6][]6}{}{}{}}
+\newlabel{eq:feature1}{{13}{6}{高斯导航}{equation.13}{}}
+\newlabel{eq:feature1@cref}{{[equation][13][]13}{[1][6][]6}{}{}{}}
+\newlabel{eq:matching}{{14}{6}{高斯导航}{equation.14}{}}
+\newlabel{eq:matching@cref}{{[equation][14][]14}{[1][6][]6}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}实验}{6}{section.4}\protected@file@percent }
+\citation{krantz2022instancespecific}
+\citation{anderson2018evaluation}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Performance comparison of our GaussNav with previous state-of-the-art methods on the HM3D \cite  {yadav2023habitat} datasets across two different metrics: Success and SPL \cite  {anderson2018evaluation}. The table is divided into four sections. The first section presents the results of end-to-end methods. The second section shows the transfer performance of MultiON-related methods on the IIN task. The third section includes the state-of-the-art methods on the IIN task. Finally, the fourth section aims to provide a fair comparison with GaussNav by replacing the episodic map used in these methods from the third section with a scene-specific map, allowing the agent to retain the map from the previous episode.}}{7}{table.1}\protected@file@percent }
+\newlabel{tab:main}{{I}{7}{Performance comparison of our GaussNav with previous state-of-the-art methods on the HM3D \cite {yadav2023habitat} datasets across two different metrics: Success and SPL \cite {anderson2018evaluation}. The table is divided into four sections. The first section presents the results of end-to-end methods. The second section shows the transfer performance of MultiON-related methods on the IIN task. The third section includes the state-of-the-art methods on the IIN task. Finally, the fourth section aims to provide a fair comparison with GaussNav by replacing the episodic map used in these methods from the third section with a scene-specific map, allowing the agent to retain the map from the previous episode}{table.1}{}}
+\newlabel{tab:main@cref}{{[table][1][]I}{[1][6][]7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}实验设置}{7}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces 轨迹分析。我们的语义高斯地图表示使智能体能够从单张目标图像直接定位目标物体，从而实现高效的视觉导航。}}{7}{figure.6}\protected@file@percent }
+\newlabel{fig:trajectory}{{6}{7}{轨迹分析。我们的语义高斯地图表示使智能体能够从单张目标图像直接定位目标物体，从而实现高效的视觉导航。}{figure.6}{}}
+\newlabel{fig:trajectory@cref}{{[figure][6][]6}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}与当前最优方法的对比}{7}{subsection.4.2}\protected@file@percent }
+\citation{he2016deep}
+\citation{schulman2017proximal}
+\citation{yadav2023ovrl}
+\citation{xia2018gibson}
+\citation{yadav2023habitat}
+\citation{wani2020multion,chen2022learning,marza2023multi}
+\citation{pautrat_suarez_2023_gluestick}
+\citation{krantz2023navigating,lei2024instanceaware}
+\citation{krantz2023navigating}
+\citation{lei2024instanceaware}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Ablation study of GaussNav. We study the impact of Classifier, Match module, novel view synthesis (NVS) and different local feature extraction and matching algorithms on our GaussNav. The last two rows describe the performance of our method using ground truth match results and goal position.}}{8}{table.2}\protected@file@percent }
+\newlabel{tab:ablations}{{II}{8}{Ablation study of GaussNav. We study the impact of Classifier, Match module, novel view synthesis (NVS) and different local feature extraction and matching algorithms on our GaussNav. The last two rows describe the performance of our method using ground truth match results and goal position}{table.2}{}}
+\newlabel{tab:ablations@cref}{{[table][2][]II}{[1][8][]8}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Results of matching success and time taken with or without classifier.(Abbreviations: clf = classifier, Ch. = Chair, So. = Sofa, Pl. = Plant, Tol. = Toilet)}}{8}{table.3}\protected@file@percent }
+\newlabel{tab:abla_classifier}{{III}{8}{Results of matching success and time taken with or without classifier.(Abbreviations: clf = classifier, Ch. = Chair, So. = Sofa, Pl. = Plant, Tol. = Toilet)}{table.3}{}}
+\newlabel{tab:abla_classifier@cref}{{[table][3][]III}{[1][8][]8}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Number of object instances across different categories in the first floor of scene \texttt  {CrMo8WxCyVb}.}}{8}{table.4}\protected@file@percent }
+\newlabel{tab:time}{{IV}{8}{Number of object instances across different categories in the first floor of scene \texttt {CrMo8WxCyVb}}{table.4}{}}
+\newlabel{tab:time@cref}{{[table][4][]IV}{[1][8][]8}{}{}{}}
+\citation{tyszkiewicz2020disk}
+\citation{lindenberger2023lightglue}
+\citation{pautrat_suarez_2023_gluestick}
+\citation{lei2024instanceaware}
+\citation{lei2024instanceaware}
+\citation{lei2024instanceaware}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Results of the number of rendered images $n$, different directions (vertical or horizontal) and whether to use ground truth rendering's impact on the matching success.}}{9}{table.5}\protected@file@percent }
+\newlabel{tab:NVS}{{V}{9}{Results of the number of rendered images $n$, different directions (vertical or horizontal) and whether to use ground truth rendering's impact on the matching success}{table.5}{}}
+\newlabel{tab:NVS@cref}{{[table][5][]V}{[1][8][]9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces SPL和帧率分析。{\color  {red}红色标记}代表端到端方法，{\color  {blue}蓝色标记}代表模块化方法。我们的{\color  {MyGreen}GaussNav}属于模块化方法，在模块化方法中实现了最高的帧率，同时在所有IIN任务方法中取得了最高的SPL。}}{9}{figure.7}\protected@file@percent }
+\newlabel{fig:framerate}{{7}{9}{SPL和帧率分析。{\color {red}红色标记}代表端到端方法，{\color {blue}蓝色标记}代表模块化方法。我们的{\color {MyGreen}GaussNav}属于模块化方法，在模块化方法中实现了最高的帧率，同时在所有IIN任务方法中取得了最高的SPL。}{figure.7}{}}
+\newlabel{fig:framerate@cref}{{[figure][7][]7}{[1][8][]9}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}消融实验}{9}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Performance Comparison of IEVE\hspace  {0.25em plus 0.125em minus 0.08em}\ignorespaces \cite  {lei2024instanceaware} and GaussNav. We compare GaussNav with the state-of-the-art method IEVE using different map representations. (Abbreviations: Ver. = Vertical, Hor. = Horizontal)}}{9}{table.6}\protected@file@percent }
+\newlabel{tab:pre-exploration}{{VI}{9}{Performance Comparison of IEVE~\cite {lei2024instanceaware} and GaussNav. We compare GaussNav with the state-of-the-art method IEVE using different map representations. (Abbreviations: Ver. = Vertical, Hor. = Horizontal)}{table.6}{}}
+\newlabel{tab:pre-exploration@cref}{{[table][6][]VI}{[1][9][]9}{}{}{}}
+\citation{szot2022habitat}
+\citation{yadav2023habitat}
+\citation{krantz2023navigating,lei2024instanceaware}
+\citation{krantz2023navigating,lei2024instanceaware}
+\citation{lei2024instanceaware}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 新视角合成结果可视化。可视化结果包括$\theta = \pm 15^\circ $的水平和垂直新视角合成结果。每张图像的右上角显示了与目标图像匹配的关键点数量。 }}{10}{figure.8}\protected@file@percent }
+\newlabel{fig:NVS}{{8}{10}{新视角合成结果可视化。可视化结果包括$\theta = \pm 15^\circ $的水平和垂直新视角合成结果。每张图像的右上角显示了与目标图像匹配的关键点数量。}{figure.8}{}}
+\newlabel{fig:NVS@cref}{{[figure][8][]8}{[1][8][]10}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces GaussNav智能体在Habitat仿真器中执行IIN任务的定性示例。当在环境中随机初始化时，智能体被提供一张描绘目标物体的目标图像。高斯导航直接在语义高斯地图中定位目标物体，并引导智能体向其移动。 }}{10}{figure.9}\protected@file@percent }
+\newlabel{fig:qualitive_result}{{9}{10}{GaussNav智能体在Habitat仿真器中执行IIN任务的定性示例。当在环境中随机初始化时，智能体被提供一张描绘目标物体的目标图像。高斯导航直接在语义高斯地图中定位目标物体，并引导智能体向其移动。}{figure.9}{}}
+\newlabel{fig:qualitive_result@cref}{{[figure][9][]9}{[1][10][]10}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}效率分析}{10}{subsection.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces 语义高斯可视化结果。 }}{11}{figure.10}\protected@file@percent }
+\newlabel{fig:vis_gauss}{{10}{11}{语义高斯可视化结果。}{figure.10}{}}
+\newlabel{fig:vis_gauss@cref}{{[figure][10][]10}{[1][10][]11}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces 我们的语义高斯构建方法在HM3D验证数据集上的渲染质量。x轴表示不同的场景索引及其对应的楼层高度。 }}{11}{figure.11}\protected@file@percent }
+\newlabel{fig:gauss_results}{{11}{11}{我们的语义高斯构建方法在HM3D验证数据集上的渲染质量。x轴表示不同的场景索引及其对应的楼层高度。}{figure.11}{}}
+\newlabel{fig:gauss_results@cref}{{[figure][11][]11}{[1][10][]11}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces 使用Habitat仿真器\cite  {szot2022habitat}从HM3D\cite  {yadav2023habitat}场景数据集渲染的观测图像。 }}{11}{figure.12}\protected@file@percent }
+\newlabel{fig:bad_render}{{12}{11}{使用Habitat仿真器\cite {szot2022habitat}从HM3D\cite {yadav2023habitat}场景数据集渲染的观测图像。}{figure.12}{}}
+\newlabel{fig:bad_render@cref}{{[figure][12][]12}{[1][10][]11}{}{}{}}
+\citation{yadav2023habitat}
+\citation{krantz2022instancespecific}
+\citation{krantz2022instancespecific}
+\bibstyle{IEEEtran}
+\bibdata{main}
+\bibcite{cheng2022learning}{1}
+\bibcite{krantz2022sim}{2}
+\bibcite{zhang2022generative}{3}
+\bibcite{lin2022multimodal}{4}
+\bibcite{qiao2023hop+}{5}
+\bibcite{cai2021pose}{6}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}错误分析}{12}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-F}}高斯构建结果}{12}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}结论}{12}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{参考文献}{12}{section*.1}\protected@file@percent }
+\bibcite{lin2021adversarial}{7}
+\bibcite{an2024etpnav}{8}
+\bibcite{wu2023human}{9}
+\bibcite{wang2020vision}{10}
+\bibcite{wang2023learning}{11}
+\bibcite{wang2022towards}{12}
+\bibcite{xia2018gibson}{13}
+\bibcite{yadav2023habitat}{14}
+\bibcite{chang2017matterport3d}{15}
+\bibcite{szot2022habitat}{16}
+\bibcite{kolve2017ai2}{17}
+\bibcite{savva2019habitat}{18}
+\bibcite{krantz2022instancespecific}{19}
+\bibcite{krantz2023navigating}{20}
+\bibcite{bono2023endtoend}{21}
+\bibcite{lei2024instanceaware}{22}
+\bibcite{chaplot2020learning}{23}
+\bibcite{chaplot2020object}{24}
+\bibcite{ramakrishnan2022poni}{25}
+\bibcite{al2022zero}{26}
+\bibcite{ma2022end}{27}
+\bibcite{mildenhall2020nerf}{28}
+\bibcite{kerbl3Dgaussians}{29}
+\bibcite{he2017mask}{30}
+\bibcite{wang2023internimage}{31}
+\bibcite{fridovich2022plenoxels}{32}
+\bibcite{liu2020neural}{33}
+\bibcite{sun2022direct}{34}
+\bibcite{muller2022instant}{35}
+\bibcite{chen2024survey}{36}
+\bibcite{luiten2023dynamic}{37}
+\bibcite{wu20234dgaussians}{38}
+\bibcite{yang2023deformable3dgs}{39}
+\bibcite{feng2024gaussian}{40}
+\bibcite{xie2023physgaussian}{41}
+\bibcite{guedon2023sugar}{42}
+\bibcite{keetha2023splatam}{43}
+\bibcite{matsuki2023gaussian}{44}
+\bibcite{yugay2023gaussianslam}{45}
+\bibcite{majumdar2022zson}{46}
+\bibcite{wang2024find}{47}
+\bibcite{chang2020semantic}{48}
+\bibcite{chaplot2021seal}{49}
+\bibcite{chen2022learning}{50}
+\bibcite{wani2020multion}{51}
+\bibcite{schmalstieg2022learning}{52}
+\bibcite{marza2023multi}{53}
+\bibcite{choi2021image}{54}
+\bibcite{yadav2023ovrl}{55}
+\bibcite{yadav2023offline}{56}
+\bibcite{Kwon_2023_CVPR}{57}
+\bibcite{Chaplot_2020_CVPR}{58}
+\bibcite{savinov2018semi}{59}
+\bibcite{TSGM}{60}
+\bibcite{wasserman2022lastmile}{61}
+\bibcite{zhu2017target}{62}
+\bibcite{mezghan2022memory}{63}
+\bibcite{wu2019bayesian}{64}
+\bibcite{hahn2021no}{65}
+\bibcite{shah2021rapid}{66}
+\bibcite{gadre2023cows}{67}
+\bibcite{gervet2023navigating}{68}
+\bibcite{liu2023bird}{69}
+\bibcite{zhang20233d}{70}
+\bibcite{tan2024self}{71}
+\bibcite{liu2024volumetric}{72}
+\bibcite{yamauchi1997frontier}{73}
+\bibcite{holz2010evaluating}{74}
+\bibcite{julia2012comparison}{75}
+\bibcite{5206848}{76}
+\bibcite{He2015}{77}
+\bibcite{tyszkiewicz2020disk}{78}
+\bibcite{lindenberger2023lightglue}{79}
+\bibcite{sun2024fgprompt}{80}
+\bibcite{anderson2018evaluation}{81}
+\bibcite{he2016deep}{82}
+\bibcite{schulman2017proximal}{83}
+\bibcite{pautrat_suarez_2023_gluestick}{84}
+\@writefile{toc}{\contentsline {section}{Biographies}{15}{IEEEbiography.0}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{雷晓涵}{15}{IEEEbiography.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{王敏}{15}{IEEEbiography.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{周文刚}{15}{IEEEbiography.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{李厚强}{15}{IEEEbiography.4}\protected@file@percent }
+\gdef \@abspage@last{15}

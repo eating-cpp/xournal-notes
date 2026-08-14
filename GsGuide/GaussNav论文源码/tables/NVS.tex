@@ -1,0 +1,52 @@
+\begin{table*}[tb]
+    \renewcommand{\arraystretch}{1.2} % Increase the row height
+    \centering
+    \begin{tabular}{c cc cc cc cc cc}
+        \hline
+        \multirow{2}{*}{Metric} & original & GT original & \multicolumn{2}{c}{horizontal} & \multicolumn{2}{c}{vertical} & \multicolumn{2}{c}{GT horizontal} & \multicolumn{2}{c}{GT vertical} \\
+        \cline{2-11}
+        & $n_v=1$ & $n_v=1$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ \\
+        \hline
+        Success $\uparrow$ & 0.811 & 0.815 & 0.824 & 0.827 & 0.832 & 0.831 & 0.835 & 0.846 & 0.839 & 0.845 \\
+        Time (s) $\downarrow$ & 11.5 & 11.7 & 32.1 & 53.9 & 33.1 & 54.2 & 32.7 & 54.1 & 33.4 & 55.1 \\
+        \hline
+    \end{tabular}
+    \vspace{5pt}
+    \caption{Results of the number of rendered images $n$, different directions (vertical or horizontal) and whether to use ground truth rendering's impact on the matching success.}
+    \vspace{-16pt}
+    \label{tab:NVS}
+\end{table*}
+
+% \begin{table*}[tb]
+%     \centering
+%     \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2cm}*{10}{>{\centering\arraybackslash}X}}
+%         \hline
+%         \multirow{2}{*}{Metric} & o. & GT o. & \multicolumn{2}{c}{hor.} & \multicolumn{2}{c}{ver.} & \multicolumn{2}{c}{GT hor.} & \multicolumn{2}{c}{GT ver.} \\
+%         \cline{2-11}
+%         & $n_v=1$ & $n_v=1$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ \\
+%         \hline
+%         Success $\uparrow$ & 0.811 & 0.815 & 0.824 & 0.827 & 0.832 & 0.831 & 0.835 & 0.846 & 0.839 & 0.845 \\
+%         Time (s) $\downarrow$ & 11.5 & 11.7 & 32.1 & 53.9 & 33.1 & 54.2 & 32.7 & 54.1 & 33.4 & 55.1 \\
+%         \hline
+%     \end{tabularx}
+%     \caption{Results of the number of rendered images $n$, different directions (ver. or hor.) and the impact of using ground truth rendering on matching success. The o.\ means the original training view, \textit{hor.} indicates horizontal NVS, and \textit{ver.} represents vertical NVS. $n$ is the number of rendered images.}
+%     \label{tab:NVS}
+% \end{table*}
+
+% \begin{table*}[tb]
+%     \renewcommand{\arraystretch}{1.2} % Increase the row height
+%     \centering
+%     % \large % Increase the font size within the table
+%     \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm}*{10}{>{\centering\arraybackslash}X}}
+%         \hline
+%         \multirow{2}{*}{Metric} & o. & GT o. & \multicolumn{2}{c}{hor.} & \multicolumn{2}{c}{ver.} & \multicolumn{2}{c}{GT hor.} & \multicolumn{2}{c}{GT ver.} \\
+%         \cline{2-11}
+%         & $n_v=1$ & $n_v=1$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ & $n_v=3$ & $n_v=5$ \\
+%         \hline
+%         Success $\uparrow$ & 0.811 & 0.815 & 0.824 & 0.827 & 0.832 & 0.831 & 0.835 & 0.846 & 0.839 & 0.845 \\
+%         Time (s) $\downarrow$ & 11.5 & 11.7 & 32.1 & 53.9 & 33.1 & 54.2 & 32.7 & 54.1 & 33.4 & 55.1 \\
+%         \hline
+%     \end{tabularx}
+%     \caption{Results of the number of rendered images $n$, different directions (ver.\ or hor.), and the impact of using ground truth rendering on matching success. The o.\ means the original training view, \textit{hor.} indicates horizontal NVS, and \textit{ver.} represents vertical NVS. $n$ is the number of rendered images.}
+%     \label{tab:NVS}
+% \end{table*}

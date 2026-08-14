@@ -1,0 +1,53 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}绪论}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究背景与意义}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}研究现状}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}可微分渲染领域的相关研究}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}相机定位领域相关研究}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}视觉导航领域相关研究}{5}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}本文主要工作与贡献}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}论文结构安排}{6}{section.1.4}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}理论基础}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}3DGS渲染方法}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}原始3D高斯泼溅技术}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}特征与语义增强的3DGS扩展}{8}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}图形扭曲与对齐技术}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}传统光度误差位姿优化}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Warping Loss高效位姿修正}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}使用鲁棒特征匹配的初始位姿估计}{10}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}虚拟环境与IIN任务}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Habitat仿真平台与HM3D数据集}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}实例级图像目标导航任务}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}基于地图的 IIN 方法演进}{11}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}基于语义增强3DGS的视觉导航算法GSGuide}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}任务总体概览}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}环境探索与语义高斯构建}{15}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}简化后的3D高斯表示}{15}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}语义高斯构建}{16}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}目标定位与相机位姿估计}{21}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}分类器}{21}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}匹配与定位}{22}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}智能体导航}{23}{section.3.4}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}实验与结果分析}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}实验准备}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}实验环境}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}实验用数据集}{25}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}智能体配置}{25}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}智能体的动作空间}{26}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}评估指标}{26}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}与现有方案的对比}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}端到端baseline方法}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}先进方法对比}{28}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}SOTA对比}{28}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}消融实验}{29}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}消融实验设置与结果}{29}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}语义渲染监督有效性}{29}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}位姿精修Warping Loss有效性}{30}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}消融实验结论}{31}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}误差分析}{32}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}语义错误识别}{32}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}场景建立质量不完善}{33}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}总结与展望}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}研究总结}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}研究展望}{36}{section.5.2}%
+\contentsline {chapter}{致谢}{39}{section*.20}%
+\contentsline {chapter}{参考文献}{41}{section*.22}%

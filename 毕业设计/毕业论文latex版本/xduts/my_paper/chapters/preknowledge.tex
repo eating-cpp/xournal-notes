@@ -1,0 +1,133 @@
+\chapter{理论基础}
+本章系统阐述本文工作所依赖的核心理论与技术基础，包括 3D 高斯泼溅（3D Gaussian Splatting, 3DGS）\cite{3DGS}的渲染原理、基于图形扭曲的位姿对齐技术，以及具身智能领域的虚拟仿真环境与实例图像目标导航（Instance ImageGoal Navigation, IIN）\cite{krantz2022instance}任务定义。
+同时，结合现有研究的局限性，给出本文提出的语义增强 3DGS 表示、高精度特征匹配初始位姿估计与高效位姿精修方法的理论依据。
+
+\section{3DGS渲染方法}
+3D高斯泼溅（3DGS）\cite{3DGS}是2023年提出的一种新型的神经渲染技术，凭借其实时的渲染速度、高保真的成像质量和高效的训练特性，迅速成为三维场景表示与重建领域的的研究热点，为视觉定位、具身导航等下游任务提供了全新的场景表示方式。
+
+\subsection{原始3D高斯泼溅技术}
+3D高斯的核心思想是使用大量各向异形的3D高斯基元离散化表示连续的三维场景。
+其中，每个高斯通过一组可优化参数完整编码其几何外观与属性。
+其原始参数集定义为：
+\begin{equation}
+    \Psi_i = \{\boldsymbol{y}_i,\boldsymbol{q}_i,\boldsymbol{s}_i,\alpha_i,\boldsymbol{c}_i \}
+\end{equation}
+
+其中，$i$代表第$i$个高斯，$\boldsymbol{y}_i \in \mathbb{R}^{3}$为高斯中心的三维世界坐标，$\boldsymbol{q}_i \in \mathbb{R}^{4}$为表示旋转的单位四元数，$\boldsymbol{s}_i \in \mathbb{R}^{3}$为三个轴向上的缩放因子，$\alpha_i \in [0,1]$为不透明度，$\boldsymbol{c}_i \in \mathbb{R}^{3}$为通过球谐函数（Spherical Harmonics, SH）编码视角的相关颜色。
+
+
+3DGS的渲染过程基于可微分光栅化实现，分为三个核心步骤：
+\begin{enumerate}
+    \item 视锥裁剪与深度排序：筛选出位于相机视锥内的高斯，并按照深度从近到远排序；
+    \item 2D投影：将3D高斯的均值和协方差矩阵投影到图像平面，得到2D椭圆的中心和协方差矩阵；
+    \item Alpha混合：对每个像素，按照深度顺序累加所有覆盖该像素的高斯的颜色贡献，最终得到渲染图像：
+    \begin{equation}
+        C(p) = \sum_{i \in N(p)} \boldsymbol{c}_i \alpha_i T_i
+    \end{equation}
+    其中$N(p)$为覆盖像素$p$的高斯集合，$T_i = \exp\left(-\sum_{j=1}^{i-1} \alpha_j\right)$为累积透射率。
+\end{enumerate}
+
+与神经辐射场（NeRF）\cite{nerf}相比，3DGS\cite{3DGS}避免了耗时的光线步进操作，同时训练速度提升一个数量级以上，为需要快速场景重建和在线渲染的几日人实时性应用提供了可行方案。
+
+\subsection{特征与语义增强的3DGS扩展}
+原始的3DGS仅能编码场景的几何与外观信息，无法直接支持语义理解、特征匹配等高级视觉任务。
+为此，研究者们提出了多种增强的3DGS表示：
+
+\begin{itemize}
+    \item \textbf{特征3DGS（Feature-3DGS）：}在原始的3DGS参数基础上，为每个高斯新增一个$V$维度的特征向量，通过蒸馏预训练的2D特征提取器的输出结果进行联合优化。
+    复用原有RGB渲染框架，仅在渲染时自适应通道数，即可同时输出RGB图像和特征图，实现了几何、外观与视觉特征的统一表示。
+    GSplatLoc\cite{gsplatloc}正式基于这一框架，将轻量级XFeat\cite{xfeat}特征蒸馏到3DGS\cite{3DGS}中，通过2D-3D特征匹配实现粗略位姿估计。
+
+    \item \textbf{语义高斯（Semantic Gaussian）：}GaussNav\cite{gaussnav}方法针对导航任务的需求，对原始3DGS\cite{3DGS}进行了轻量化的改造，将高斯约束为各项同性（仅保留单个缩放因子），斌给每个高斯添加离散于一类别标签。
+    将Mask R-CNN\cite{maskrcnn}的语义分割结果在初始化点云阶段赋予每个高斯的语义标签，为实例级目标识别提供了基础。
+\end{itemize}
+
+而现有增强型高斯表示存在明显的局限性：GSplatLoc\cite{gsplatloc}的特征向量是通用视觉特征，缺乏明确的语义；
+GaussNav\cite{gaussnav}的语义标签是离散类别，而且仅在初始化点云阶段为离散语义标签赋值，但并不参加后续的监督与优化过程。
+为解决这一问题，本文提出的GSGuide框架在原始3DGS\cite{3DGS}参数基础上，遵从GaussNav\cite{gaussnav}\cite{gaussnav}论文所用到的6个COCO ID\cite{coco}类别和一个背景类别，为每一个高斯新增一个7维度的可训练的语义向量$\boldsymbol{l}_i$，并使用在COCO-Stuff\cite{coco-stuff}数据集上预训练的Yolo26\cite{Yolo26}语义分割模型所输出的语义信息与实例识别结果联合进行训练。
+COCO ID编号与语义类别以及对应向量索引关系如表\ref{tab:cocoid对应关系表}所示：
+\begin{table}[htbp]
+    \centering
+    \caption{COCO ID编号与语义类别以及对应7维向量索引关系表}
+    \begin{tabular}{cccccccc}
+        \toprule
+        \textbf{语义类别} & 背景 & 椅子 & 沙发 & 电视机 & 盆栽植物 & 马桶 & 床 \\
+        \midrule
+        \textbf{对应的COCO ID类别} & - & 56 & 57 & 58 & 59 & 61 & 62 \\
+        \textbf{对应语义向量索引} & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+        \bottomrule
+    \end{tabular}
+    \vspace{0.5em}  % 添加间距
+    \label{tab:cocoid对应关系表}
+\end{table}
+
+
+可微的语义向量能够同时编码类别于一和实例特征，使每个高斯成为几何、外观与细粒度语义的统一载体，为后续的语义感知位姿估计和实例级目标匹配提供了更强大的表示能力。
+
+\section{图形扭曲与对齐技术}
+视觉定位与导航的核心是精确估计相机在三维场景中的位姿。
+基于3D高斯渲染的位姿精修技术通过最小化渲染图像与真实观测图像的差异，能够显著提升初始位姿的精度。
+其中，图形扭曲（Warping）技术是实现高效位姿优化的关键。
+
+\subsection{传统光度误差位姿优化}
+早期基于神经渲染的位姿精修方法（例如iNeRF\cite{inerf}）采用迭代渲染的策略：在每次优化步骤中，根据当前估计的位姿渲染图像，计算其与查询图像的光度误差（如L1损失、SSIM损失），然后通过反向传播更新位姿参数。
+这种方法虽然原理简单，但每次迭代都需要完整的渲染过程，因而计算成本较高，效率较低，难以满足IIN任务的实时性要求。
+
+\subsection{Warping Loss高效位姿修正}
+为解决传统方法的效率问题，PNeRFLoc\cite{pnerfloc}首次提出了\textbf{单次渲染+图形扭曲(Warping)的位姿}的位姿优化框架。
+其核心思想是：仅需要根据初始粗位姿渲染一次参考图像和深度图，然后通过扭曲函数将参考图像的像素投影到查询图像平面，计算像素级差异作为损失函数（Warping Loss），避免了重复渲染。
+
+GSplatLoc\cite{gsplatloc}将原本设计为NeRF|\cite{nerf}服务的Warping Loss与3DGS框架适配，与其快速渲染能力相结合，进一步提升了位姿精修效率。
+
+具体而言，对于一张查询图像$q$和一个粗略位姿$(\boldsymbol{R},\boldsymbol{t})$，参考图像像素$p_i$的深度为$z_r(p_i)$,那么扭曲函数$W(\cdot)$定义为：
+\begin{equation}
+    W(p_i,\boldsymbol{R},\boldsymbol{t},\boldsymbol{R}',\boldsymbol{t}')=\Pi {(\boldsymbol{R}(\boldsymbol{R}'^{-1} \Pi ^{-1}(p_i,z_r(p_i))-\boldsymbol{R}'^{-1}\boldsymbol{t}')+\boldsymbol{t})}
+\end{equation}
+
+其中$\Pi (\cdot)$为相机投影函数，$\Pi ^{-1}(\cdot)$为反投影函数，$\boldsymbol{R}$为相机旋转矩阵，$\boldsymbol{t}$为相机平移向量。
+
+基于扭曲函数的RGB损失定义为：
+\begin{equation}
+   \mathcal{L}_{rgb-warp}=\sum _{p_i}\left\lVert Y(q,W(p_i,\boldsymbol{R},\boldsymbol{t},\boldsymbol{R}',\boldsymbol{t}'))-Y(q_r,p_i)\right\rVert _2
+\end{equation}
+其中$Y(q,p)$为查询图像$q$在像素$p$处的RGB值，$Y(q_r,p_i)$为参考图像$q_r$在像素$p$处的RGB值。
+
+实验表明，该方法在RTX 3060 GPU上仅需约1.25秒即可完成250次迭代的位姿优化，显著快于NeRF-based方法。
+
+\subsection{使用鲁棒特征匹配的初始位姿估计}
+Warping Loss的优化效果高度依赖估计的初始粗位姿的质量。
+如果初始位姿偏差过大，后续的位姿精修容易陷入类似随机的对齐步骤。
+GSplatLoc\cite{gsplatloc}采用XFeat\cite{xfeat}特征提取器进行2D-3D匹配，虽然速度快，但依赖于预先训练好的带有64维蒸馏特征的高斯，在场景较大的空间中，或者相似物品较多的情况中，匹配精度受限，存储开销较大，效率也会下降。
+
+为提升初始位姿的鲁棒性，本文所提的GSGuide框架采用DISK 局部特征提取器\cite{disk} + LightGlue 特征匹配器\cite{lightglue}的组合方案。
+DISK\cite{disk} 能够提取高重复率、高辨识度的关键点和描述子，而 LightGlue\cite{lightglue} 作为一种基于 Transformer 的轻量级特征匹配器，能够在保持高精度的同时实现实时匹配。
+GaussNav\cite{gaussnav} 方法已验证了该组合在实例级目标匹配任务中的有效性。
+
+本文从所有参与3DGS训练的图像中提取DISK\cite{disk}特征，与导航目标图像通过LightGlue\cite{lightglue}进行匹配，将最为相似的训练图像作为估计初始位姿，为后续基于Warping Loss的精修算法提供了可靠的初始值，也大幅度降低了位姿估计时间和存储开销。
+
+\section{虚拟环境与IIN任务}
+在具身视觉导航领域，虚拟环境为导航算法的开发与评估提供了标准化、可重复的测试平台。
+
+\subsection{Habitat仿真平台与HM3D数据集}
+Habitat\cite{habitat-sim} 是由 Meta AI 开发的高性能具身智能仿真平台，专为大规模室内导航任务设计。它支持物理真实的渲染、刚体物理模拟和多智能体并行训练，能够在单 GPU 上实现每秒数千帧的仿真速度，大幅提升了算法的开发效率。
+
+本文采用的Habitat-Matterport 3D（HM3D）\cite{HM3D}数据集是目前最大规模的真实室内场景 3D 重建数据集，包含 1000 多个真实住宅和商业建筑的高质量 3D 扫描模型，覆盖 400 多个房间类型和 200 多个物体类别。每个场景都提供了精确的几何重建、语义标注和相机参数，被广泛应用于具身导航、三维视觉等领域的研究。
+
+\subsection{实例级图像目标导航任务}
+实例级图像目标导航 IIN\cite{krantz2022instance} 任务的设定如下：在一个未知环境中，仅向智能体提供一张目标物体的图像，智能体需要通过自主探索环境，找到并导航到该目标物体的具体实例。
+与传统的物体目标导航（ObjectNav）不同，IIN\cite{krantz2022instance} 要求智能体区分同一类别的不同实例（如两把外观相似的椅子），并且目标图像的拍摄视角、相机参数与智能体的观测可能存在显著差异。
+
+IIN任务的核心挑战包括：
+\begin{enumerate}
+    \item \textbf{跨视角目标识别：}智能体需要从不同视角识别目标物体，克服视角变化带来的外观差异；
+    \item \textbf{相似实例区分：}存在多个同类物体的环境中，准确区分目标实例与干扰实例；
+    \item \textbf{探索与利用的平衡：}智能体需要在探索位置环境和利用已有信息定位目标之间取得平衡。
+\end{enumerate}
+
+\subsection{基于地图的 IIN 方法演进}
+现有 IIN 方法主要基于鸟瞰图（Bird's-Eye View, BEV）\cite{krantz2023navigating,lei2024instance,chaplot2020object}地图表示，通过投影语义信息到 2D 平面实现环境建模。
+然而，BEV 地图丢失了场景的 3D 几何信息和物体的纹理细节，无法进行细粒度的实例级匹配，导致智能体需要频繁靠近物体进行验证，降低了导航效率。
+
+GaussNav\cite{gaussnav} 方法首次将 3DGS 引入 IIN\cite{krantz2022instance} 任务，提出了语义高斯地图表示，通过保留物体的纹理细节，实现了直接从目标图像到场景实例的匹配，无需额外的验证步骤，将 HM3D 数据集上的 SPL 指标从 0.347 提升至 0.578。
+
+本文所提框架GSGuide在 GaussNav\cite{gaussnav} 的基础上，通过引入可训练语义向量增强高斯的细粒度表示能力，结合 DISK+LightGlue\cite{disk,lightglue} 的高精度位姿估计和 GSplatLoc\cite{gsplatloc} 中提到的Warping Loss 的高效位姿精修，进一步提升语义高斯地图的重建精度和实例匹配的准确性，从而实现更高效、更鲁棒的 IIN 导航。
