@@ -1,0 +1,143 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sample-acmtog-SIGGRAPH-submission.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: reference.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--no number and no volume in bai_2025_qwen25vl
+Warning--page numbers missing in both pages and numpages fields in bai_2025_qwen25vl
+Warning--empty publisher in RN26
+Warning--empty address in RN26
+Warning--empty publisher in cao2003cylindrical
+Warning--empty address in cao2003cylindrical
+Warning--empty address in RN13
+Warning--empty publisher in das2019dewarpnet
+Warning--empty address in das2019dewarpnet
+Warning--empty publisher in das2021end
+Warning--empty address in das2021end
+Warning--empty publisher in feng2021doctr
+Warning--empty address in feng2021doctr
+Warning--no number and no volume in feng2025docscanner
+Warning--page numbers missing in both pages and numpages fields in feng2025docscanner
+Warning--empty publisher in Feng2022geodocnet
+Warning--empty address in Feng2022geodocnet
+Warning--page numbers missing in both pages and numpages fields in Feng2022geodocnet
+Warning--no number and no volume in hertlein2023inv3d
+Warning--empty publisher in hertlein2025docmatcher
+Warning--empty address in hertlein2025docmatcher
+Warning--page numbers missing in both pages and numpages fields in hertlein2025docmatcher
+Warning--empty address in ho_2020_ddpm
+Warning--empty publisher in jiang2022RDGR
+Warning--empty address in jiang2022RDGR
+Warning--empty publisher in Kanungo_1993
+Warning--empty address in Kanungo_1993
+Warning--empty publisher in li2023foreground
+Warning--empty address in li2023foreground
+Warning--page numbers missing in both pages and numpages fields in li2023ladoc
+Warning--empty publisher in li2025docsam
+Warning--empty address in li2025docsam
+Warning--page numbers missing in both pages and numpages fields in li2025docsam
+Warning--empty publisher in Li_2024_CVPR
+Warning--empty address in Li_2024_CVPR
+Warning--empty publisher in luo2024flowdiffuser
+Warning--empty address in luo2024flowdiffuser
+Warning--empty publisher in RN58
+Warning--empty address in RN58
+Warning--empty publisher in ma2018docunet
+Warning--empty address in ma2018docunet
+Warning--empty publisher in markovitz2020can
+Warning--empty address in markovitz2020can
+Warning--empty publisher in RN20
+Warning--empty address in RN20
+Warning--empty publisher in RN18
+Warning--empty address in RN18
+Warning--empty publisher in RN21
+Warning--empty address in RN21
+Warning--no journal in nam_2024_diffmatch
+Warning--no number and no volume in nam_2024_diffmatch
+Warning--page numbers missing in both pages and numpages fields in nam_2024_diffmatch
+Warning--empty address in Alexander_2020_ddim
+Warning--empty publisher in Peebles_2023_dit
+Warning--empty address in Peebles_2023_dit
+Warning--can't use both volume and number fields in pmlr-vae-2014
+Warning--no number and no volume in simonyan2014very
+Warning--page numbers missing in both pages and numpages fields in simonyan2014very
+Warning--empty address in Song_2019_Generative
+Warning--page numbers missing in both pages and numpages fields in Song_2019_Generative
+Warning--empty publisher in tian2011rectification
+Warning--empty address in tian2011rectification
+Warning--empty publisher in Tsoi_2007
+Warning--empty address in Tsoi_2007
+Warning--empty publisher in verhoeven2023neural
+Warning--empty address in verhoeven2023neural
+Warning--page numbers missing in both pages and numpages fields in verhoeven2023neural
+Warning--empty address in wan_2024_multidetect
+Warning--empty publisher in msssim2003
+Warning--empty address in msssim2003
+Warning--no number and no volume in wei2024general
+Warning--page numbers missing in both pages and numpages fields in wei2024general
+Warning--empty publisher in xie2020dewarping
+Warning--empty address in xie2020dewarping
+Warning--empty publisher in xie2021document
+Warning--empty address in xie2021document
+Warning--empty publisher in xue2022fourier
+Warning--empty address in xue2022fourier
+Warning--no number and no volume in yan2025gpt-imgeval
+Warning--page numbers missing in both pages and numpages fields in yan2025gpt-imgeval
+Warning--empty publisher in jiaxin2022marior
+Warning--empty address in jiaxin2022marior
+Warning--empty publisher in zhang_2024_docres
+Warning--empty address in zhang_2024_docres
+Warning--empty publisher in zhang2024reg
+Warning--empty address in zhang2024reg
+Warning--page numbers missing in both pages and numpages fields in zhang2024reg
+You've used 67 entries,
+            6273 wiz_defined-function locations,
+            1953 strings with 33021 characters,
+and the built_in function-call counts, 83796 in all, are:
+= -- 9968
+> -- 3152
+< -- 0
++ -- 1086
+- -- 1042
+* -- 6274
+:= -- 8124
+add.period$ -- 330
+call.type$ -- 67
+change.case$ -- 586
+chr.to.int$ -- 62
+cite$ -- 154
+duplicate$ -- 7477
+empty$ -- 5210
+format.name$ -- 1301
+if$ -- 20396
+int.to.chr$ -- 7
+int.to.str$ -- 1
+missing$ -- 293
+newline$ -- 556
+num.names$ -- 474
+pop$ -- 3217
+preamble$ -- 1
+purify$ -- 1111
+quote$ -- 0
+skip$ -- 2774
+stack$ -- 0
+substring$ -- 5915
+swap$ -- 777
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1689
+warning$ -- 87
+while$ -- 360
+width$ -- 0
+write$ -- 1305
+(There were 87 warnings)

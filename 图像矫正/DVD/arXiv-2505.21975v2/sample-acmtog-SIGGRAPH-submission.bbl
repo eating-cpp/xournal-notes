@@ -1,0 +1,556 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{67}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Bai et~al\mbox{.}(2025)]%
+        {bai_2025_qwen25vl}
+\bibfield{author}{\bibinfo{person}{Shuai Bai}, \bibinfo{person}{Keqin Chen}, \bibinfo{person}{Xuejing Liu}, \bibinfo{person}{Jialin Wang}, \bibinfo{person}{Wenbin Ge}, \bibinfo{person}{Sibo Song}, \bibinfo{person}{Kai Dang}, \bibinfo{person}{Peng Wang}, \bibinfo{person}{Shijie Wang}, \bibinfo{person}{Jun Tang}, {et~al\mbox{.}}} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Qwen2. 5-vl technical report}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2502.13923}} (\bibinfo{year}{2025}).
+\newblock
+
+
+\bibitem[Brown and Seales(2001)]%
+        {RN26}
+\bibfield{author}{\bibinfo{person}{Michael~S Brown} {and} \bibinfo{person}{W~Brent Seales}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Document restoration using 3D shape: a general deskewing algorithm for arbitrarily warped documents}. In \bibinfo{booktitle}{\emph{International Conference on Computer Vision(ICCV)}}, Vol.~\bibinfo{volume}{2}. \bibinfo{pages}{367--374}.
+\newblock
+
+
+\bibitem[Cao et~al\mbox{.}(2003a)]%
+        {cao2003cylindrical}
+\bibfield{author}{\bibinfo{person}{Huaigu Cao}, \bibinfo{person}{Xiaoqing Ding}, {and} \bibinfo{person}{Changsong Liu}.} \bibinfo{year}{2003}\natexlab{a}.
+\newblock \showarticletitle{A cylindrical surface model to rectify the bound document image}. In \bibinfo{booktitle}{\emph{International Conference on Computer Vision(ICCV)}}. \bibinfo{pages}{228--233}.
+\newblock
+
+
+\bibitem[Cao et~al\mbox{.}(2003b)]%
+        {RN13}
+\bibfield{author}{\bibinfo{person}{Huaigu Cao}, \bibinfo{person}{Xiaoqing Ding}, {and} \bibinfo{person}{Changsong Liu}.} \bibinfo{year}{2003}\natexlab{b}.
+\newblock \showarticletitle{Rectifying the bound document image captured by the camera: A model based approach}. In \bibinfo{booktitle}{\emph{International Conference on Document Analysis and Recognition(ICDAR)}}. \bibinfo{publisher}{IEEE}, \bibinfo{pages}{71--75}.
+\newblock
+
+
+\bibitem[Das et~al\mbox{.}(2019)]%
+        {das2019dewarpnet}
+\bibfield{author}{\bibinfo{person}{Sagnik Das}, \bibinfo{person}{Ke Ma}, \bibinfo{person}{Zhixin Shu}, \bibinfo{person}{Dimitris Samaras}, {and} \bibinfo{person}{Roy Shilkrot}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{DewarpNet}: {Single-image} document unwarping with stacked {3D} and {2D} regression networks}. In \bibinfo{booktitle}{\emph{International Conference on Computer Vision(ICCV)}}. \bibinfo{pages}{131--140}.
+\newblock
+
+
+\bibitem[Das et~al\mbox{.}(2021)]%
+        {das2021end}
+\bibfield{author}{\bibinfo{person}{Sagnik Das}, \bibinfo{person}{Kunwar~Yashraj Singh}, \bibinfo{person}{Jon Wu}, \bibinfo{person}{Erhan Bas}, \bibinfo{person}{Vijay Mahadevan}, \bibinfo{person}{Rahul Bhotika}, {and} \bibinfo{person}{Dimitris Samaras}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{End-to-end piece-wise unwarping of document images}. In \bibinfo{booktitle}{\emph{International Conference on Computer Vision(ICCV)}}. \bibinfo{pages}{4268--4277}.
+\newblock
+
+
+\bibitem[Feng et~al\mbox{.}(2024)]%
+        {feng_docpedia_2024}
+\bibfield{author}{\bibinfo{person}{Hao Feng}, \bibinfo{person}{Qi Liu}, \bibinfo{person}{Hao Liu}, \bibinfo{person}{Jingqun Tang}, \bibinfo{person}{Wengang Zhou}, \bibinfo{person}{Houqiang Li}, {and} \bibinfo{person}{Can Huang}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{DocPedia}: unleashing the power of large multimodal model in the frequency domain for versatile document understanding}.
+\newblock \bibinfo{journal}{\emph{Science China Information Sciences}} \bibinfo{volume}{67}, \bibinfo{number}{12} (\bibinfo{date}{Dec.} \bibinfo{year}{2024}), \bibinfo{pages}{220106}.
+\newblock
+\showISSN{1869-1919}
+
+
+\bibitem[Feng et~al\mbox{.}(2021)]%
+        {feng2021doctr}
+\bibfield{author}{\bibinfo{person}{Hao Feng}, \bibinfo{person}{Yuechen Wang}, \bibinfo{person}{Wengang Zhou}, \bibinfo{person}{Jiajun Deng}, {and} \bibinfo{person}{Houqiang Li}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{DocTr}: Document image transformer for geometric unwarping and illumination correction}. In \bibinfo{booktitle}{\emph{Proceedings of the ACM International Conference on Multimedia(MM)}}. \bibinfo{pages}{273--281}.
+\newblock
+
+
+\bibitem[Feng et~al\mbox{.}(2025)]%
+        {feng2025docscanner}
+\bibfield{author}{\bibinfo{person}{Hao Feng}, \bibinfo{person}{Wengang Zhou}, \bibinfo{person}{Jiajun Deng}, \bibinfo{person}{Qi Tian}, {and} \bibinfo{person}{Houqiang Li}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{DocScanner: Robust document image rectification with progressive learning}.
+\newblock \bibinfo{journal}{\emph{International Journal of Computer Vision(IJCV)}} (\bibinfo{year}{2025}).
+\newblock
+
+
+\bibitem[Feng et~al\mbox{.}(2022)]%
+        {Feng2022geodocnet}
+\bibfield{author}{\bibinfo{person}{Hao Feng}, \bibinfo{person}{Wengang Zhou}, \bibinfo{person}{Jiajun Deng}, \bibinfo{person}{Yuechen Wang}, {and} \bibinfo{person}{Houqiang Li}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Geometric Representation Learning for Document Image Rectification}. In \bibinfo{booktitle}{\emph{European Conference on Computer Vision(ECCV)}}.
+\newblock
+
+
+\bibitem[Hertlein et~al\mbox{.}(2023)]%
+        {hertlein2023inv3d}
+\bibfield{author}{\bibinfo{person}{Felix Hertlein}, \bibinfo{person}{Alexander Naumann}, {and} \bibinfo{person}{Patrick Philipp}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Inv3D: a high-resolution 3D invoice dataset for template-guided single-image document unwarping}.
+\newblock \bibinfo{journal}{\emph{International Journal on Document Analysis and Recognition(IJDAR)}} (\bibinfo{year}{2023}), \bibinfo{pages}{1--12}.
+\newblock
+
+
+\bibitem[Hertlein et~al\mbox{.}(2025)]%
+        {hertlein2025docmatcher}
+\bibfield{author}{\bibinfo{person}{Felix Hertlein}, \bibinfo{person}{Alexander Naumann}, {and} \bibinfo{person}{York Sure-Vetter}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{DocMatcher: Document Image Dewarping via Structural and Textual Line Matching}. In \bibinfo{booktitle}{\emph{IEEE/CVF Winter Conference on Applications of Computer vision(WACV)}}.
+\newblock
+
+
+\bibitem[Ho et~al\mbox{.}(2020)]%
+        {ho_2020_ddpm}
+\bibfield{author}{\bibinfo{person}{Jonathan Ho}, \bibinfo{person}{Ajay Jain}, {and} \bibinfo{person}{Pieter Abbeel}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Denoising Diffusion Probabilistic Models}. In \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems(NIPS)}}, \bibfield{editor}{\bibinfo{person}{H.~Larochelle}, \bibinfo{person}{M.~Ranzato}, \bibinfo{person}{R.~Hadsell}, \bibinfo{person}{M.F. Balcan}, {and} \bibinfo{person}{H.~Lin}} (Eds.), Vol.~\bibinfo{volume}{33}. \bibinfo{publisher}{Curran Associates, Inc.}, \bibinfo{pages}{6840--6851}.
+\newblock
+
+
+\bibitem[Jiang et~al\mbox{.}(2022)]%
+        {jiang2022RDGR}
+\bibfield{author}{\bibinfo{person}{Xiangwei Jiang}, \bibinfo{person}{Rujiao Long}, \bibinfo{person}{Nan Xue}, \bibinfo{person}{Zhibo Yang}, \bibinfo{person}{Cong Yao}, {and} \bibinfo{person}{Gui-Song Xia}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Revisiting Document Image Dewarping by Grid Regularization}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{4533--4542}.
+\newblock
+
+
+\bibitem[Kanungo et~al\mbox{.}(1993)]%
+        {Kanungo_1993}
+\bibfield{author}{\bibinfo{person}{Tapas Kanungo}, \bibinfo{person}{Robert~M. Haralick}, {and} \bibinfo{person}{lhsin Phillips}.} \bibinfo{year}{1993}\natexlab{}.
+\newblock \showarticletitle{Global and local document degradation models}. In \bibinfo{booktitle}{\emph{International Conference on Document Analysis and Recognition(ICDAR)}}. \bibinfo{pages}{730--734}.
+\newblock
+\href{https://doi.org/10.1109/ICDAR.1993.395633}{doi:\nolinkurl{10.1109/ICDAR.1993.395633}}
+
+
+\bibitem[Karmanov et~al\mbox{.}(2025)]%
+        {karmanov_eclair_2025}
+\bibfield{author}{\bibinfo{person}{Ilia Karmanov}, \bibinfo{person}{Amala~Sanjay Deshmukh}, \bibinfo{person}{Lukas Voegtle}, \bibinfo{person}{Philipp Fischer}, \bibinfo{person}{Kateryna Chumachenko}, \bibinfo{person}{Timo Roman}, \bibinfo{person}{Jarno Seppänen}, \bibinfo{person}{Jupinder Parmar}, \bibinfo{person}{Joseph Jennings}, \bibinfo{person}{Andrew Tao}, {and} \bibinfo{person}{Karan Sapra}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Éclair -- {Extracting} {Content} and {Layout} with {Integrated} {Reading} {Order} for {Documents}}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2502.04223}{doi:\nolinkurl{10.48550/arXiv.2502.04223}}
+\newblock
+\shownote{arXiv:2502.04223 [cs]}.
+
+
+\bibitem[Kim et~al\mbox{.}(2015)]%
+        {RN16}
+\bibfield{author}{\bibinfo{person}{Beom~Su Kim}, \bibinfo{person}{Hyung~Il Koo}, {and} \bibinfo{person}{Nam~Ik Cho}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Document dewarping via text-line based optimization}.
+\newblock \bibinfo{journal}{\emph{Pattern Recognition(PR)}} \bibinfo{volume}{48}, \bibinfo{number}{11} (\bibinfo{year}{2015}), \bibinfo{pages}{3600--3614}.
+\newblock
+
+
+\bibitem[Koo et~al\mbox{.}(2009)]%
+        {koo2009composition}
+\bibfield{author}{\bibinfo{person}{Hyung~Il Koo}, \bibinfo{person}{Jinho Kim}, {and} \bibinfo{person}{Nam~Ik Cho}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Composition of a dewarped and enhanced document image from two view images}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Image Processing(TIP)}} \bibinfo{volume}{18}, \bibinfo{number}{7} (\bibinfo{year}{2009}), \bibinfo{pages}{1551--1562}.
+\newblock
+
+
+\bibitem[Levenshtein et~al\mbox{.}(1966)]%
+        {levenshtein1966binary}
+\bibfield{author}{\bibinfo{person}{Vladimir~I Levenshtein} {et~al\mbox{.}}} \bibinfo{year}{1966}\natexlab{}.
+\newblock \showarticletitle{Binary codes capable of correcting deletions, insertions, and reversals}.
+\newblock \bibinfo{journal}{\emph{Soviet Physics Doklady}} \bibinfo{volume}{10}, \bibinfo{number}{8} (\bibinfo{year}{1966}), \bibinfo{pages}{707--710}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2023b)]%
+        {li2023foreground}
+\bibfield{author}{\bibinfo{person}{Heng Li}, \bibinfo{person}{Xiangping Wu}, \bibinfo{person}{Qingcai Chen}, {and} \bibinfo{person}{Qianjin Xiang}.} \bibinfo{year}{2023}\natexlab{b}.
+\newblock \showarticletitle{Foreground and Text-lines Aware Document Image Rectification}. In \bibinfo{booktitle}{\emph{International Conference on Computer Vision(ICCV)}}. \bibinfo{pages}{19574--19583}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2023a)]%
+        {li2023ladoc}
+\bibfield{author}{\bibinfo{person}{Pu Li}, \bibinfo{person}{Weize Quan}, \bibinfo{person}{Jianwei Guo}, {and} \bibinfo{person}{Dong-Ming Yan}.} \bibinfo{year}{2023}\natexlab{a}.
+\newblock \showarticletitle{Layout-Aware Single-Image Document Flattening}.
+\newblock \bibinfo{journal}{\emph{ACM Transactions on Graphics(TOG)}} \bibinfo{volume}{43}, \bibinfo{number}{1} (\bibinfo{year}{2023}).
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2019)]%
+        {li2019document}
+\bibfield{author}{\bibinfo{person}{Xiaoyu Li}, \bibinfo{person}{Bo Zhang}, \bibinfo{person}{Jing Liao}, {and} \bibinfo{person}{Pedro~V Sander}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Document rectification and illumination correction using a patch-based {CNN}}.
+\newblock \bibinfo{journal}{\emph{ACM Transactions on Graphics(TOG)}} \bibinfo{volume}{38}, \bibinfo{number}{6} (\bibinfo{year}{2019}), \bibinfo{pages}{1--11}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2025)]%
+        {li2025docsam}
+\bibfield{author}{\bibinfo{person}{Xiao-Hui Li}, \bibinfo{person}{Fei Yin}, {and} \bibinfo{person}{Cheng-Lin Liu}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{DocSAM: Unified Document Image Segmentation via Query Decomposition and Heterogeneous Mixed Learning}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}.
+\newblock
+
+
+\bibitem[Li et~al\mbox{.}(2024)]%
+        {Li_2024_CVPR}
+\bibfield{author}{\bibinfo{person}{Zhang Li}, \bibinfo{person}{Biao Yang}, \bibinfo{person}{Qiang Liu}, \bibinfo{person}{Zhiyin Ma}, \bibinfo{person}{Shuo Zhang}, \bibinfo{person}{Jingxu Yang}, \bibinfo{person}{Yabo Sun}, \bibinfo{person}{Yuliang Liu}, {and} \bibinfo{person}{Xiang Bai}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Monkey: Image Resolution and Text Label Are Important Things for Large Multi-modal Models}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{26763--26773}.
+\newblock
+
+
+\bibitem[Liang et~al\mbox{.}(2008)]%
+        {RN19}
+\bibfield{author}{\bibinfo{person}{Jian Liang}, \bibinfo{person}{Daniel DeMenthon}, {and} \bibinfo{person}{David Doermann}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Geometric rectification of camera-captured document images}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence(TPAMI)}} \bibinfo{volume}{30}, \bibinfo{number}{4} (\bibinfo{year}{2008}), \bibinfo{pages}{591--605}.
+\newblock
+
+
+\bibitem[Liu et~al\mbox{.}(2010)]%
+        {liu2010sift}
+\bibfield{author}{\bibinfo{person}{Ce Liu}, \bibinfo{person}{Jenny Yuen}, {and} \bibinfo{person}{Antonio Torralba}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Sift flow: Dense correspondence across scenes and its applications}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence(TPAMI)}} \bibinfo{volume}{33}, \bibinfo{number}{5} (\bibinfo{year}{2010}), \bibinfo{pages}{978--994}.
+\newblock
+
+
+\bibitem[Luo et~al\mbox{.}(2024)]%
+        {luo2024flowdiffuser}
+\bibfield{author}{\bibinfo{person}{Ao Luo}, \bibinfo{person}{Xin Li}, \bibinfo{person}{Fan Yang}, \bibinfo{person}{Jiangyu Liu}, \bibinfo{person}{Haoqiang Fan}, {and} \bibinfo{person}{Shuaicheng Liu}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{FlowDiffuser: Advancing Optical Flow Estimation with Diffusion Models}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{19167--19176}.
+\newblock
+
+
+\bibitem[Ma et~al\mbox{.}(2022)]%
+        {RN58}
+\bibfield{author}{\bibinfo{person}{Ke Ma}, \bibinfo{person}{Sagnik Das}, \bibinfo{person}{Zhixin Shu}, {and} \bibinfo{person}{Dimitris Samaras}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Learning From Documents in the Wild to Improve Document Unwarping}. In \bibinfo{booktitle}{\emph{ACM Special Interest Group on Computer Graphics(SIGGRAPH)}}. \bibinfo{pages}{1--9}.
+\newblock
+
+
+\bibitem[Ma et~al\mbox{.}(2018)]%
+        {ma2018docunet}
+\bibfield{author}{\bibinfo{person}{Ke Ma}, \bibinfo{person}{Zhixin Shu}, \bibinfo{person}{Xue Bai}, \bibinfo{person}{Jue Wang}, {and} \bibinfo{person}{Dimitris Samaras}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{DocUNet}: {Document} image unwarping via a stacked {U-Net}}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{4700--4709}.
+\newblock
+
+
+\bibitem[Markovitz et~al\mbox{.}(2020)]%
+        {markovitz2020can}
+\bibfield{author}{\bibinfo{person}{Amir Markovitz}, \bibinfo{person}{Inbal Lavi}, \bibinfo{person}{Or Perel}, \bibinfo{person}{Shai Mazor}, {and} \bibinfo{person}{Roee Litman}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Can You Read Me Now? Content aware rectification using angle supervision}. In \bibinfo{booktitle}{\emph{European Conference on Computer Vision(ECCV)}}. \bibinfo{pages}{208--223}.
+\newblock
+
+
+\bibitem[Meng et~al\mbox{.}(2015)]%
+        {RN20}
+\bibfield{author}{\bibinfo{person}{Gaofeng Meng}, \bibinfo{person}{Zuming Huang}, \bibinfo{person}{Yonghong Song}, \bibinfo{person}{Shiming Xiang}, {and} \bibinfo{person}{Chunhong Pan}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{Extraction of virtual baselines from distorted document images using curvilinear projection}. In \bibinfo{booktitle}{\emph{International Conference on Computer Vision(ICCV)}}. \bibinfo{pages}{3925--3933}.
+\newblock
+
+
+\bibitem[Meng et~al\mbox{.}(2018)]%
+        {RN18}
+\bibfield{author}{\bibinfo{person}{Gaofeng Meng}, \bibinfo{person}{Yuanqi Su}, \bibinfo{person}{Ying Wu}, \bibinfo{person}{Shiming Xiang}, {and} \bibinfo{person}{Chunhong Pan}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Exploiting vector fields for geometric rectification of distorted document images}. In \bibinfo{booktitle}{\emph{European Conference on Computer Vision(ECCV)}}. \bibinfo{pages}{172--187}.
+\newblock
+
+
+\bibitem[Meng et~al\mbox{.}(2014)]%
+        {RN21}
+\bibfield{author}{\bibinfo{person}{Gaofeng Meng}, \bibinfo{person}{Ying Wang}, \bibinfo{person}{Shenquan Qu}, \bibinfo{person}{Shiming Xiang}, {and} \bibinfo{person}{Chunhong Pan}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Active flattening of curved document images via two structured beams}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{3890--3897}.
+\newblock
+
+
+\bibitem[Nam et~al\mbox{.}(2024)]%
+        {nam_2024_diffmatch}
+\bibfield{author}{\bibinfo{person}{Jisu Nam}, \bibinfo{person}{Gyuseong Lee}, \bibinfo{person}{Sunwoo Kim}, \bibinfo{person}{Hyeonsu Kim}, \bibinfo{person}{Hyoungwon Cho}, \bibinfo{person}{Seyeon Kim}, {and} \bibinfo{person}{Seungryong Kim}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{DiffMatch: Diffusion Model for Dense Matching}.
+\newblock  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Nassar et~al\mbox{.}(2025)]%
+        {nassar_smoldocling_2025}
+\bibfield{author}{\bibinfo{person}{Ahmed Nassar}, \bibinfo{person}{Andres Marafioti}, \bibinfo{person}{Matteo Omenetti}, \bibinfo{person}{Maksym Lysak}, \bibinfo{person}{Nikolaos Livathinos}, \bibinfo{person}{Christoph Auer}, \bibinfo{person}{Lucas Morin}, \bibinfo{person}{Rafael Teixeira~de Lima}, \bibinfo{person}{Yusik Kim}, \bibinfo{person}{A.~Said Gurbuz}, \bibinfo{person}{Michele Dolfi}, \bibinfo{person}{Miquel Farré}, {and} \bibinfo{person}{Peter W.~J. Staar}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{SmolDocling}: {An} ultra-compact vision-language model for end-to-end multi-modal document conversion}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2503.11576}{doi:\nolinkurl{10.48550/arXiv.2503.11576}}
+\newblock
+\shownote{arXiv:2503.11576 [cs]}.
+
+
+\bibitem[Nichol and Dhariwal(2021)]%
+        {Alexander_2020_ddim}
+\bibfield{author}{\bibinfo{person}{Alexander~Quinn Nichol} {and} \bibinfo{person}{Prafulla Dhariwal}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Improved Denoising Diffusion Probabilistic Models}. In \bibinfo{booktitle}{\emph{International Conference on Machine Learning(ICML)}} \emph{(\bibinfo{series}{Proceedings of Machine Learning Research}, Vol.~\bibinfo{volume}{139})}, \bibfield{editor}{\bibinfo{person}{Marina Meila} {and} \bibinfo{person}{Tong Zhang}} (Eds.). \bibinfo{publisher}{PMLR}, \bibinfo{pages}{8162--8171}.
+\newblock
+
+
+\bibitem[Peebles and Xie(2023)]%
+        {Peebles_2023_dit}
+\bibfield{author}{\bibinfo{person}{William Peebles} {and} \bibinfo{person}{Saining Xie}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Scalable Diffusion Models with Transformers}. In \bibinfo{booktitle}{\emph{International Conference on Computer Vision(ICCV)}}. \bibinfo{pages}{4195--4205}.
+\newblock
+
+
+\bibitem[Qin et~al\mbox{.}(2020)]%
+        {qin_u2net_2020}
+\bibfield{author}{\bibinfo{person}{Xuebin Qin}, \bibinfo{person}{Zichen Zhang}, \bibinfo{person}{Chenyang Huang}, \bibinfo{person}{Masood Dehghan}, \bibinfo{person}{Osmar~R. Zaiane}, {and} \bibinfo{person}{Martin Jagersand}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{U2-{Net}: {Going} deeper with nested {U}-structure for salient object detection}.
+\newblock \bibinfo{journal}{\emph{Pattern Recognition(PR)}}  \bibinfo{volume}{106} (\bibinfo{year}{2020}), \bibinfo{pages}{107404}.
+\newblock
+\showISSN{0031-3203}
+
+
+\bibitem[Ravishankar et~al\mbox{.}(2024)]%
+        {ravishankar_2024_scaling}
+\bibfield{author}{\bibinfo{person}{Rahul Ravishankar}, \bibinfo{person}{Zeeshan Patel}, \bibinfo{person}{Jathushan Rajasegaran}, {and} \bibinfo{person}{Jitendra Malik}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Scaling {Properties} of {Diffusion} {Models} for {Perceptual} {Tasks}}.
+\newblock
+\href{https://doi.org/10.48550/arXiv.2411.08034}{doi:\nolinkurl{10.48550/arXiv.2411.08034}}
+\newblock
+\shownote{arXiv:2411.08034 [cs]}.
+
+
+\bibitem[Rezende et~al\mbox{.}(2014)]%
+        {pmlr-vae-2014}
+\bibfield{author}{\bibinfo{person}{Danilo~Jimenez Rezende}, \bibinfo{person}{Shakir Mohamed}, {and} \bibinfo{person}{Daan Wierstra}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Stochastic Backpropagation and Approximate Inference in Deep Generative Models}. In \bibinfo{booktitle}{\emph{Proceedings of the 31st International Conference on Machine Learning}} \emph{(\bibinfo{series}{International Conference on Machine Learning(ICML)}, Vol.~\bibinfo{volume}{32})}, \bibfield{editor}{\bibinfo{person}{Eric~P. Xing} {and} \bibinfo{person}{Tony Jebara}} (Eds.). \bibinfo{publisher}{PMLR}, \bibinfo{address}{Bejing, China}, \bibinfo{pages}{1278--1286}.
+\newblock
+
+
+\bibitem[Rombach et~al\mbox{.}(2021)]%
+        {rombach2021highresolution}
+\bibfield{author}{\bibinfo{person}{Robin Rombach}, \bibinfo{person}{Andreas Blattmann}, \bibinfo{person}{Dominik Lorenz}, \bibinfo{person}{Patrick Esser}, {and} \bibinfo{person}{Björn Ommer}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \bibinfo{title}{High-Resolution Image Synthesis with Latent Diffusion Models}.
+\newblock
+\showeprint[arxiv]{2112.10752}~[cs.CV]
+
+
+\bibitem[Ronneberger et~al\mbox{.}(2015)]%
+        {ronneberger_unet_2015}
+\bibfield{author}{\bibinfo{person}{Olaf Ronneberger}, \bibinfo{person}{Philipp Fischer}, {and} \bibinfo{person}{Thomas Brox}.} \bibinfo{year}{2015}\natexlab{}.
+\newblock \showarticletitle{U-{Net}: {Convolutional} {Networks} for {Biomedical} {Image} {Segmentation}}. In \bibinfo{booktitle}{\emph{Medical Image Computing and Computer Assisted Intervention(MICCAI)}}. \bibinfo{publisher}{Springer International Publishing}, \bibinfo{address}{Cham}, \bibinfo{pages}{234--241}.
+\newblock
+\showISBNx{978-3-319-24574-4}
+
+
+\bibitem[Scius-Bertrand et~al\mbox{.}(2024)]%
+        {Scius_ocr_2024}
+\bibfield{author}{\bibinfo{person}{Anna Scius-Bertrand}, \bibinfo{person}{Atefeh Fakhari}, \bibinfo{person}{Lars V{\"o}gtlin}, \bibinfo{person}{Daniel~Ribeiro Cabral}, {and} \bibinfo{person}{Andreas Fischer}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Are Layout Analysis and OCR Still Useful for Document Information Extraction Using Foundation Models?}. In \bibinfo{booktitle}{\emph{International Conference on Document Analysis and Recognition(ICDAR)}}, \bibfield{editor}{\bibinfo{person}{Elisa~H. Barney~Smith}, \bibinfo{person}{Marcus Liwicki}, {and} \bibinfo{person}{Liangrui Peng}} (Eds.). \bibinfo{publisher}{Springer Nature Switzerland}, \bibinfo{address}{Cham}, \bibinfo{pages}{175--191}.
+\newblock
+
+
+\bibitem[Simonyan and Zisserman(2014)]%
+        {simonyan2014very}
+\bibfield{author}{\bibinfo{person}{Karen Simonyan} {and} \bibinfo{person}{Andrew Zisserman}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Very deep convolutional networks for large-scale image recognition}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:1409.1556}} (\bibinfo{year}{2014}).
+\newblock
+
+
+\bibitem[Song and Ermon(2019)]%
+        {Song_2019_Generative}
+\bibfield{author}{\bibinfo{person}{Yang Song} {and} \bibinfo{person}{Stefano Ermon}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Generative Modeling by Estimating Gradients of the Data Distribution}. In \bibinfo{booktitle}{\emph{Advances in Neural Information Processing Systems(NIPS)}}, \bibfield{editor}{\bibinfo{person}{H.~Wallach}, \bibinfo{person}{H.~Larochelle}, \bibinfo{person}{A.~Beygelzimer}, \bibinfo{person}{F.~d\textquotesingle Alch\'{e}-Buc}, \bibinfo{person}{E.~Fox}, {and} \bibinfo{person}{R.~Garnett}} (Eds.), Vol.~\bibinfo{volume}{32}. \bibinfo{publisher}{Curran Associates, Inc.}
+\newblock
+
+
+\bibitem[Tan et~al\mbox{.}(2005)]%
+        {tan2005restoring}
+\bibfield{author}{\bibinfo{person}{Chew~Lim Tan}, \bibinfo{person}{Li Zhang}, \bibinfo{person}{Zheng Zhang}, {and} \bibinfo{person}{Tao Xia}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Restoring warped document images through {3D} shape modeling}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence(TPAMI)}} \bibinfo{volume}{28}, \bibinfo{number}{2} (\bibinfo{year}{2005}), \bibinfo{pages}{195--208}.
+\newblock
+
+
+\bibitem[Tian and Narasimhan(2011)]%
+        {tian2011rectification}
+\bibfield{author}{\bibinfo{person}{Yuandong Tian} {and} \bibinfo{person}{Srinivasa~G Narasimhan}.} \bibinfo{year}{2011}\natexlab{}.
+\newblock \showarticletitle{Rectification and {3D} reconstruction of curved document images}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{377--384}.
+\newblock
+
+
+\bibitem[Tsoi and Brown(2007)]%
+        {Tsoi_2007}
+\bibfield{author}{\bibinfo{person}{Yau-Chat Tsoi} {and} \bibinfo{person}{Michael~S. Brown}.} \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{Multi-View Document Rectification using Boundary}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{1--8}.
+\newblock
+\href{https://doi.org/10.1109/CVPR.2007.383251}{doi:\nolinkurl{10.1109/CVPR.2007.383251}}
+
+
+\bibitem[Ulges et~al\mbox{.}(2004)]%
+        {Ulges_2004}
+\bibfield{author}{\bibinfo{person}{Adrian Ulges}, \bibinfo{person}{Christoph~H. Lampert}, {and} \bibinfo{person}{Thomas Breuel}.} \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{Document capture using stereo vision}. In \bibinfo{booktitle}{\emph{Proceedings of the 2004 ACM Symposium on Document Engineering}} (Milwaukee, Wisconsin, USA) \emph{(\bibinfo{series}{DocEng '04})}. \bibinfo{publisher}{Association for Computing Machinery}, \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{198–200}.
+\newblock
+\showISBNx{1581139381}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1030397.1030434}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Verhoeven et~al\mbox{.}(2023)]%
+        {verhoeven2023neural}
+\bibfield{author}{\bibinfo{person}{Floor Verhoeven}, \bibinfo{person}{Tanguy Magne}, {and} \bibinfo{person}{Olga Sorkine-Hornung}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{{UVDoc}: Neural Grid-based Document Unwarping}. In \bibinfo{booktitle}{\emph{ACM SIGGRAPH Conference and Exhibition on Computer Graphics and Interactive Techniques in Asia(SIGGRAPH ASIA)}}.
+\newblock
+
+
+\bibitem[Wada et~al\mbox{.}(1997)]%
+        {RN23}
+\bibfield{author}{\bibinfo{person}{Toshikazu Wada}, \bibinfo{person}{Hiroyuki Ukida}, {and} \bibinfo{person}{Takashi Matsuyama}.} \bibinfo{year}{1997}\natexlab{}.
+\newblock \showarticletitle{Shape from shading with interreflections under a proximal light source: Distortion-free copying of an unfolded book}.
+\newblock \bibinfo{journal}{\emph{International Journal of Computer Vision(IJCV)}} \bibinfo{volume}{24}, \bibinfo{number}{2} (\bibinfo{year}{1997}), \bibinfo{pages}{125--135}.
+\newblock
+
+
+\bibitem[Wan et~al\mbox{.}(2024)]%
+        {wan_2024_multidetect}
+\bibfield{author}{\bibinfo{person}{Xingyu Wan}, \bibinfo{person}{Chengquan Zhang}, \bibinfo{person}{Pengyuan Lyu}, \bibinfo{person}{Sen Fan}, \bibinfo{person}{Zihan Ni}, \bibinfo{person}{Kun Yao}, \bibinfo{person}{Errui Ding}, {and} \bibinfo{person}{Jingdong Wang}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Towards unified multi-granularity text detection with interactive attention}. In \bibinfo{booktitle}{\emph{International Conference on Machine Learning(ICML)}} (Vienna, Austria) \emph{(\bibinfo{series}{ICML'24})}. \bibinfo{publisher}{JMLR.org}, Article \bibinfo{articleno}{2046}, \bibinfo{numpages}{14}~pages.
+\newblock
+
+
+\bibitem[Wang et~al\mbox{.}(2003)]%
+        {msssim2003}
+\bibfield{author}{\bibinfo{person}{Zhou Wang}, \bibinfo{person}{EeroP Simoncelli}, {and} \bibinfo{person}{AlanC Bovik}.} \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Multiscale structural similarity for image quality assessment}. In \bibinfo{booktitle}{\emph{Asilomar Conference on Signals, Systems and Computers(CSSC)}}. \bibinfo{pages}{1398--1402}.
+\newblock
+
+
+\bibitem[Wei et~al\mbox{.}(2024)]%
+        {wei2024general}
+\bibfield{author}{\bibinfo{person}{Haoran Wei}, \bibinfo{person}{Chenglong Liu}, \bibinfo{person}{Jinyue Chen}, \bibinfo{person}{Jia Wang}, \bibinfo{person}{Lingyu Kong}, \bibinfo{person}{Yanming Xu}, \bibinfo{person}{Zheng Ge}, \bibinfo{person}{Liang Zhao}, \bibinfo{person}{Jianjian Sun}, \bibinfo{person}{Yuang Peng}, {et~al\mbox{.}}} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2409.01704}} (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Xie et~al\mbox{.}(2020)]%
+        {xie2020dewarping}
+\bibfield{author}{\bibinfo{person}{Guo-Wang Xie}, \bibinfo{person}{Fei Yin}, \bibinfo{person}{Xu-Yao Zhang}, {and} \bibinfo{person}{Cheng-Lin Liu}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Dewarping document image by displacement flow estimation with fully convolutional Network}. In \bibinfo{booktitle}{\emph{International Workshop on Document Analysis Systems(DAS)}}. \bibinfo{pages}{131--144}.
+\newblock
+
+
+\bibitem[Xie et~al\mbox{.}(2021)]%
+        {xie2021document}
+\bibfield{author}{\bibinfo{person}{Guo-Wang Xie}, \bibinfo{person}{Fei Yin}, \bibinfo{person}{Xu-Yao Zhang}, {and} \bibinfo{person}{Cheng-Lin Liu}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Document Dewarping with Control Points}. In \bibinfo{booktitle}{\emph{International Conference on Document Analysis and Recognition(ICDAR)}}. \bibinfo{pages}{466--480}.
+\newblock
+
+
+\bibitem[Xue et~al\mbox{.}(2022)]%
+        {xue2022fourier}
+\bibfield{author}{\bibinfo{person}{Chuhui Xue}, \bibinfo{person}{Zichen Tian}, \bibinfo{person}{Fangneng Zhan}, \bibinfo{person}{Shijian Lu}, {and} \bibinfo{person}{Song Bai}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Fourier document restoration for robust document dewarping and recognition}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{4573--4582}.
+\newblock
+
+
+\bibitem[Yan et~al\mbox{.}(2025)]%
+        {yan2025gpt-imgeval}
+\bibfield{author}{\bibinfo{person}{Zhiyuan Yan}, \bibinfo{person}{Junyan Ye}, \bibinfo{person}{Weijia Li}, \bibinfo{person}{Zilong Huang}, \bibinfo{person}{Shenghai Yuan}, \bibinfo{person}{Xiangyang He}, \bibinfo{person}{Kaiqing Lin}, \bibinfo{person}{Jun He}, \bibinfo{person}{Conghui He}, {and} \bibinfo{person}{Li Yuan}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{GPT-ImgEval: A Comprehensive Benchmark for Diagnosing GPT4o in Image Generation}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2504.02782}} (\bibinfo{year}{2025}).
+\newblock
+
+
+\bibitem[You et~al\mbox{.}(2017a)]%
+        {RN11}
+\bibfield{author}{\bibinfo{person}{Shaodi You}, \bibinfo{person}{Yasuyuki Matsushita}, \bibinfo{person}{Sudipta Sinha}, \bibinfo{person}{Yusuke Bou}, {and} \bibinfo{person}{Katsushi Ikeuchi}.} \bibinfo{year}{2017}\natexlab{a}.
+\newblock \showarticletitle{Multiview rectification of folded documents}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence(TPAMI)}} \bibinfo{volume}{40}, \bibinfo{number}{2} (\bibinfo{year}{2017}), \bibinfo{pages}{505--511}.
+\newblock
+
+
+\bibitem[You et~al\mbox{.}(2017b)]%
+        {ld2017}
+\bibfield{author}{\bibinfo{person}{Shaodi You}, \bibinfo{person}{Yasuyuki Matsushita}, \bibinfo{person}{Sudipta Sinha}, \bibinfo{person}{Yusuke Bou}, {and} \bibinfo{person}{Katsushi Ikeuchi}.} \bibinfo{year}{2017}\natexlab{b}.
+\newblock \showarticletitle{Multiview rectification of folded documents}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence(TPAMI)}} \bibinfo{volume}{40}, \bibinfo{number}{2} (\bibinfo{year}{2017}), \bibinfo{pages}{505--511}.
+\newblock
+
+
+\bibitem[Yu et~al\mbox{.}(2024)]%
+        {yu_docreal_2024}
+\bibfield{author}{\bibinfo{person}{Fangchen Yu}, \bibinfo{person}{Yina Xie}, \bibinfo{person}{Lei Wu}, \bibinfo{person}{Yafei Wen}, \bibinfo{person}{Guozhi Wang}, \bibinfo{person}{Shuai Ren}, \bibinfo{person}{Xiaoxin Chen}, \bibinfo{person}{Jianfeng Mao}, {and} \bibinfo{person}{Wenye Li}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{DocReal}: {Robust} {Document} {Dewarping} of {Real}-{Life} {Images} via {Attention}-{Enhanced} {Control} {Point} {Prediction}}. In \bibinfo{booktitle}{\emph{IEEE/CVF Winter Conference on Applications of Computer vision(WACV)}}. \bibinfo{publisher}{IEEE}, \bibinfo{address}{Waikoloa, HI, USA}, \bibinfo{pages}{654--663}.
+\newblock
+\showISBNx{9798350318920}
+\href{https://doi.org/10.1109/WACV57701.2024.00072}{doi:\nolinkurl{10.1109/WACV57701.2024.00072}}
+
+
+\bibitem[Zhang et~al\mbox{.}(2022)]%
+        {jiaxin2022marior}
+\bibfield{author}{\bibinfo{person}{Jiaxin Zhang}, \bibinfo{person}{Canjie Luo}, \bibinfo{person}{Lianwen Jin}, \bibinfo{person}{Fengjun Guo}, {and} \bibinfo{person}{Kai Ding}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Marior: Margin Removal and Iterative Content Rectification for Document Dewarping in the Wild}. In \bibinfo{booktitle}{\emph{Proceedings of the ACM International Conference on Multimedia(MM)}}. \bibinfo{pages}{2805--2815}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2024a)]%
+        {zhang_2024_docres}
+\bibfield{author}{\bibinfo{person}{Jiaxin Zhang}, \bibinfo{person}{Dezhi Peng}, \bibinfo{person}{Chongyu Liu}, \bibinfo{person}{Peirong Zhang}, {and} \bibinfo{person}{Lianwen Jin}.} \bibinfo{year}{2024}\natexlab{a}.
+\newblock \showarticletitle{DocRes: A Generalist Model Toward Unifying Document Image Restoration Tasks}. In \bibinfo{booktitle}{\emph{IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR)}}. \bibinfo{pages}{15654--15664}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2008)]%
+        {RN29}
+\bibfield{author}{\bibinfo{person}{Li Zhang}, \bibinfo{person}{Yu Zhang}, {and} \bibinfo{person}{Chew Tan}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{An improved physically-based method for geometric restoration of distorted document images}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence(TPAMI)}} \bibinfo{volume}{30}, \bibinfo{number}{4} (\bibinfo{year}{2008}), \bibinfo{pages}{728--734}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2024b)]%
+        {zhang2024reg}
+\bibfield{author}{\bibinfo{person}{Weiguang Zhang}, \bibinfo{person}{Qiufeng Wang}, \bibinfo{person}{Kaizhu Huang}, \bibinfo{person}{Xiaomeng Gu}, {and} \bibinfo{person}{Fengjun Guo}.} \bibinfo{year}{2024}\natexlab{b}.
+\newblock \showarticletitle{Coarse-to-Fine Document Image Registration for Dewarping}. In \bibinfo{booktitle}{\emph{International Conference on Document Analysis and Recognition(ICDAR)}}. Springer.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2024c)]%
+        {zhang_2024_docregistration}
+\bibfield{author}{\bibinfo{person}{Weiguang Zhang}, \bibinfo{person}{Qiufeng Wang}, \bibinfo{person}{Kaizhu Huang}, \bibinfo{person}{Xiaowei Huang}, \bibinfo{person}{Fengjun Guo}, {and} \bibinfo{person}{Xiaomeng Gu}.} \bibinfo{year}{2024}\natexlab{c}.
+\newblock \showarticletitle{Document Registration: Towards Automated Labeling of Pixel-Level Alignment Between Warped-Flat Documents}. In \bibinfo{booktitle}{\emph{Proceedings of the ACM International Conference on Multimedia(MM)}} \emph{(\bibinfo{series}{MM '24})}. \bibinfo{publisher}{Association for Computing Machinery}, \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{9933–9942}.
+\newblock
+\showISBNx{9798400706868}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3664647.3681548}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Zhou et~al\mbox{.}(2025)]%
+        {zhou_dochformer_2025}
+\bibfield{author}{\bibinfo{person}{Xinyue Zhou}, \bibinfo{person}{Guanting Li}, \bibinfo{person}{Nanfeng Jiang}, \bibinfo{person}{Da-Han Wang}, \bibinfo{person}{Xu-Yao Zhang}, {and} \bibinfo{person}{ShunZhi Zhu}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{{DocHFormer}: {Document} {Image} {Dewarping} via {Harmonized} {Modeling} of {Hierarchical} {Priors}}. In \bibinfo{booktitle}{\emph{Pattern Recognition(PR)}}. \bibinfo{publisher}{Springer Nature Switzerland}, \bibinfo{address}{Cham}, \bibinfo{pages}{29--44}.
+\newblock
+
+
+\end{thebibliography}

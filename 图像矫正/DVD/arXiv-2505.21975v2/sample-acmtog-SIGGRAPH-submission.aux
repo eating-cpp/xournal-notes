@@ -1,0 +1,277 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Scius_ocr_2024}
+\citation{li2025docsam,wan_2024_multidetect}
+\citation{Kanungo_1993,cao2003cylindrical,RN19}
+\citation{ma2018docunet,li2019document,das2019dewarpnet}
+\citation{zhang_2024_docregistration,verhoeven2023neural,zhang2024reg}
+\citation{li2023foreground,Feng2022geodocnet}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparisons to the existing paradigm for document dewarping. Unlike the existing paradigms (a) and (b) struggle with either precise structural preservation or faithful content generation, our DVD (c) can yield flat document images with precise yet faithful content through a mapping generation paradigm. }}{1}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:head_img}{{1}{1}{Comparisons to the existing paradigm for document dewarping. Unlike the existing paradigms (a) and (b) struggle with either precise structural preservation or faithful content generation, our DVD (c) can yield flat document images with precise yet faithful content through a mapping generation paradigm}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{ravishankar_2024_scaling,nam_2024_diffmatch,luo2024flowdiffuser}
+\citation{yan2025gpt-imgeval}
+\citation{das2019dewarpnet}
+\citation{ma2018docunet}
+\citation{Feng2022geodocnet}
+\citation{hertlein2023inv3d}
+\citation{verhoeven2023neural}
+\citation{yu_docreal_2024}
+\citation{xue2022fourier}
+\citation{li2023ladoc}
+\citation{RN26,RN21}
+\citation{RN29}
+\citation{Ulges_2004,koo2009composition,RN11}
+\citation{RN23}
+\citation{tian2011rectification}
+\citation{RN18}
+\citation{RN16}
+\citation{RN13,koo2009composition}
+\citation{RN19}
+\citation{Tsoi_2007}
+\citation{tan2005restoring}
+\citation{RN20}
+\citation{RN29}
+\citation{RN11}
+\citation{RN18}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of document dewarping benchmarks. {\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 55} symbolizes that this benchmark doesn't explicitly distinguish this domain. \textbf  {Scenes:} Multiple scenarios (Mul), Real (R), Synthetic (S). \textbf  {Domains:} Layouts Category (L), Environment Lighting (E), Capture Angles (A). }}{2}{table.caption.3}\protected@file@percent }
+\newlabel{tab:unwarping_datasets}{{1}{2}{Comparison of document dewarping benchmarks. \ding {55} symbolizes that this benchmark doesn't explicitly distinguish this domain. \textbf {Scenes:} Multiple scenarios (Mul), Real (R), Synthetic (S). \textbf {Domains:} Layouts Category (L), Environment Lighting (E), Capture Angles (A)}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related work}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Early Model-based Methods}{2}{subsection.2.1}\protected@file@percent }
+\citation{ma2018docunet}
+\citation{das2019dewarpnet}
+\citation{markovitz2020can}
+\citation{li2019document}
+\citation{das2021end}
+\citation{xie2020dewarping}
+\citation{xie2021document}
+\citation{feng2021doctr}
+\citation{jiang2022RDGR}
+\citation{Feng2022geodocnet}
+\citation{li2023foreground}
+\citation{RN58}
+\citation{jiaxin2022marior}
+\citation{yu_docreal_2024}
+\citation{xue2022fourier}
+\citation{verhoeven2023neural}
+\citation{li2023ladoc}
+\citation{hertlein2025docmatcher,hertlein2023inv3d}
+\citation{zhou_dochformer_2025}
+\citation{zhang_2024_docres}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Framework of the proposed DvD.} Given a warped document as input, DvD generates latent variables $m$ to characterize the mapping for deformation rectification. We leverage a compound condition $c_t$: the features for raw document images $f_d$, document foreground mask $f_m$, text-lines $f_l$, and the time-variant condition of the intermediate result $r_t$, respectively. We visualize the reverse denoise generation process in the right pink region.}}{3}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:img2}{{2}{3}{\textbf {Framework of the proposed DvD.} Given a warped document as input, DvD generates latent variables $m$ to characterize the mapping for deformation rectification. We leverage a compound condition $c_t$: the features for raw document images $f_d$, document foreground mask $f_m$, text-lines $f_l$, and the time-variant condition of the intermediate result $r_t$, respectively. We visualize the reverse denoise generation process in the right pink region}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Data-driven Methods}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces General document dewarping pipeline. We propose a dewarping model to predict a backward mapping for deformation rectification, consisting of two coordinates channels.}}{3}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:head_dewarp}{{3}{3}{General document dewarping pipeline. We propose a dewarping model to predict a backward mapping for deformation rectification, consisting of two coordinates channels}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{3}{Methodology}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Document Dewarping Framework}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:Framework}{{3.1}{3}{Document Dewarping Framework}{subsection.3.1}{}}
+\citation{rombach2021highresolution}
+\citation{ho_2020_ddpm,Song_2019_Generative}
+\citation{Alexander_2020_ddim}
+\citation{Feng2022geodocnet,li2023foreground,jiang2022RDGR}
+\citation{pmlr-vae-2014}
+\citation{simonyan2014very}
+\citation{qin_u2net_2020}
+\citation{ronneberger_unet_2015}
+\citation{Peebles_2023_dit}
+\newlabel{eq:def}{{1}{4}{Document Dewarping Framework}{equation.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Coordinates-Based Diffusion Model}{4}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:method31}{{3.2}{4}{Coordinates-Based Diffusion Model}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Latent Diffusion Model in Coordinate Space.}{4}{subsubsection.3.2.1}\protected@file@percent }
+\newlabel{eq:forward}{{2}{4}{Latent Diffusion Model in Coordinate Space}{equation.2}{}}
+\newlabel{eq:reverse_ddim}{{3}{4}{Latent Diffusion Model in Coordinate Space}{equation.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Compound Conditions $c_t$.}{4}{subsubsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Time-variant Condition Refinement (TVCR) Mechanism.}{4}{subsubsection.3.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Detailed architectures of condition embedding blocks (CEB) and fusion generation blocks (FGB). We ignore some simple operations, such as cosine position encoding and activation functions.}}{4}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:network}{{4}{4}{Detailed architectures of condition embedding blocks (CEB) and fusion generation blocks (FGB). We ignore some simple operations, such as cosine position encoding and activation functions}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Network Architecture}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:method32}{{3.3}{4}{Network Architecture}{subsection.3.3}{}}
+\citation{ho_2020_ddpm}
+\citation{Feng2022geodocnet}
+\citation{ho_2020_ddpm}
+\citation{luo2024flowdiffuser}
+\citation{nam_2024_diffmatch}
+\citation{Alexander_2020_ddim}
+\citation{das2019dewarpnet}
+\citation{RN58}
+\citation{Feng2022geodocnet}
+\citation{verhoeven2023neural}
+\citation{li2023foreground}
+\citation{xie2020dewarping}
+\citation{xie2021document}
+\citation{RN58}
+\citation{verhoeven2023neural}
+\citation{li2023ladoc}
+\citation{yu_docreal_2024}
+\citation{das2019dewarpnet}
+\citation{feng2021doctr}
+\citation{jiang2022RDGR}
+\citation{jiaxin2022marior}
+\citation{Feng2022geodocnet}
+\citation{li2023foreground}
+\citation{feng2025docscanner}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A sample data array visualization across 3 distinct domain spectra (A, B, C) in our AnyPhotoDoc6300 Benchmark. We aim to evaluate the dewarping capability of the model to different warping patterns (D) under well-distinguished domain combinations.}}{5}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:benchmark_vis}{{5}{5}{A sample data array visualization across 3 distinct domain spectra (A, B, C) in our AnyPhotoDoc6300 Benchmark. We aim to evaluate the dewarping capability of the model to different warping patterns (D) under well-distinguished domain combinations}{figure.caption.7}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces DvD training for TVCR mechanism}}{5}{algocf.1}\protected@file@percent }
+\newlabel{alg:training}{{1}{5}{Network Architecture}{ALC@unique.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Training and Sampling}{5}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:method33}{{3.4}{5}{Training and Sampling}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}DvD Training Algorithm.}{5}{subsubsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Model Optimization.}{5}{subsubsection.3.4.2}\protected@file@percent }
+\newlabel{eq:loss}{{4}{5}{Model Optimization}{equation.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Stochastic Sampling Property.}{5}{subsubsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{5}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}AnyPhotoDoc6300 Benchmark}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:data}{{4.1}{5}{AnyPhotoDoc6300 Benchmark}{subsection.4.1}{}}
+\citation{ma2018docunet,das2019dewarpnet,RN58}
+\citation{msssim2003}
+\citation{ld2017}
+\citation{RN58}
+\citation{liu2010sift}
+\citation{levenshtein1966binary}
+\citation{wei2024general,karmanov_eclair_2025,nassar_smoldocling_2025}
+\citation{bai_2025_qwen25vl}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Qualitative comparisons on the AnyPhotoDoc6300 benchmark. We highlight some obvious content edges with red dotted lines. More visual comparisons can be found on the Figures-only pages after the reference.}}{6}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:vis_compa1}{{6}{6}{Qualitative comparisons on the AnyPhotoDoc6300 benchmark. We highlight some obvious content edges with red dotted lines. More visual comparisons can be found on the Figures-only pages after the reference}{figure.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Quantitative dewarping performance comparisons on the \hbox {DocUNet} benchmark dataset. \textbf  {Bold} indicates the best, \underline  {underline} indicates second-best. The last column shows the network size by the number of parameters (millions).}}{6}{table.caption.10}\protected@file@percent }
+\newlabel{tab:comparisontable}{{2}{6}{Quantitative dewarping performance comparisons on the \hbox {DocUNet} benchmark dataset. \textbf {Bold} indicates the best, \underline {underline} indicates second-best. The last column shows the network size by the number of parameters (millions)}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Metrics}{6}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:metric}{{4.2}{6}{Metrics}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Feature Alignment Metrics.}{6}{subsubsection.4.2.1}\protected@file@percent }
+\citation{ma2018docunet}
+\citation{Feng2022geodocnet}
+\citation{das2019dewarpnet}
+\citation{Li_2024_CVPR,feng_docpedia_2024}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the multiple Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER. More evaluation results can be found on the Figures-only pages after the reference.}}{7}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:vis_comparison0}{{7}{7}{Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the multiple Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER. More evaluation results can be found on the Figures-only pages after the reference}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}OCR Metrics.}{7}{subsubsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Qualitative and Quantitative Comparison}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Qualitative Comparisons.}{7}{subsubsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Quantitative Comparisons.}{7}{subsubsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Fine-grained Quantitative Comparisons.}{7}{subsubsection.4.3.3}\protected@file@percent }
+\citation{ma2018docunet}
+\citation{das2019dewarpnet}
+\citation{jiaxin2022marior}
+\citation{verhoeven2023neural}
+\citation{li2023ladoc}
+\citation{li2023foreground}
+\citation{yu_docreal_2024}
+\citation{das2019dewarpnet}
+\citation{RN58}
+\citation{Feng2022geodocnet}
+\citation{verhoeven2023neural}
+\citation{li2023foreground}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Ablation study on different learning paradigms.}}{8}{table.caption.12}\protected@file@percent }
+\newlabel{tab:ablation1}{{3}{8}{Ablation study on different learning paradigms}{table.caption.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Ablation study for different conditions components}}{8}{table.caption.13}\protected@file@percent }
+\newlabel{tab:ablation2}{{4}{8}{Ablation study for different conditions components}{table.caption.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Ablations on sampling step, performance, and time consumption.}}{8}{table.caption.14}\protected@file@percent }
+\newlabel{tab:ablation3}{{5}{8}{Ablations on sampling step, performance, and time consumption}{table.caption.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Ablations study for different latent size.}}{8}{table.caption.15}\protected@file@percent }
+\newlabel{tab:ablation4}{{6}{8}{Ablations study for different latent size}{table.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Ablation Studies}{8}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Effectiveness on different Dewarping Paradigms.}{8}{subsubsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Component Analysis of Compound Conditions.}{8}{subsubsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Computational Efficiency Analysis.}{8}{subsubsection.4.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Size Analysis for Latent Space.}{8}{subsubsection.4.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.5}Limitations.}{8}{subsubsection.4.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Acknowledgments}{8}{section*.17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces More Qualitative comparisons on the DocUNet benchmark. We highlight some obvious content edges with red dotted lines. }}{9}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:vis_compa2}{{8}{9}{More Qualitative comparisons on the DocUNet benchmark. We highlight some obvious content edges with red dotted lines}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces More Qualitative comparisons on the AnyPhotoDoc6300 benchmark. We highlight some obvious content edges with red dotted lines. }}{9}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:vis_compa3}{{9}{9}{More Qualitative comparisons on the AnyPhotoDoc6300 benchmark. We highlight some obvious content edges with red dotted lines}{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the fixed "Two-column Paper" Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER. More evaluation results can be found on the Figures-only pages after the reference.}}{10}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:vis_comparison}{{10}{10}{Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the fixed "Two-column Paper" Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER. More evaluation results can be found on the Figures-only pages after the reference}{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces More Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the fixed "Single-column Paper" Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER. }}{10}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:vis_comparison2}{{11}{10}{More Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the fixed "Single-column Paper" Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER}{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces More Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the fixed "Magazine" Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER.}}{10}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:vis_comparison3}{{12}{10}{More Quantitative dewarping performance comparisons on the \hbox {AnyPhotoDoc6600} benchmark dataset. Under the fixed "Magazine" Layout Pattern, we provided 18 dimensions of evaluation for AD, MS-SSIM, and MMCER}{figure.caption.22}{}}
+\bibstyle{ACM-Reference-Format}
+\bibdata{reference}
+\bibcite{bai_2025_qwen25vl}{{1}{2025}{{Bai et~al\mbox  {.}}}{{}}}
+\bibcite{RN26}{{2}{2001}{{Brown and Seales}}{{}}}
+\bibcite{cao2003cylindrical}{{3}{2003a}{{Cao et~al\mbox  {.}}}{{}}}
+\bibcite{RN13}{{4}{2003b}{{Cao et~al\mbox  {.}}}{{}}}
+\bibcite{das2019dewarpnet}{{5}{2019}{{Das et~al\mbox  {.}}}{{}}}
+\bibcite{das2021end}{{6}{2021}{{Das et~al\mbox  {.}}}{{}}}
+\bibcite{feng_docpedia_2024}{{7}{2024}{{Feng et~al\mbox  {.}}}{{}}}
+\bibcite{feng2021doctr}{{8}{2021}{{Feng et~al\mbox  {.}}}{{}}}
+\bibcite{feng2025docscanner}{{9}{2025}{{Feng et~al\mbox  {.}}}{{}}}
+\bibcite{Feng2022geodocnet}{{10}{2022}{{Feng et~al\mbox  {.}}}{{}}}
+\bibcite{hertlein2023inv3d}{{11}{2023}{{Hertlein et~al\mbox  {.}}}{{}}}
+\bibcite{hertlein2025docmatcher}{{12}{2025}{{Hertlein et~al\mbox  {.}}}{{}}}
+\bibcite{ho_2020_ddpm}{{13}{2020}{{Ho et~al\mbox  {.}}}{{}}}
+\bibcite{jiang2022RDGR}{{14}{2022}{{Jiang et~al\mbox  {.}}}{{}}}
+\bibcite{Kanungo_1993}{{15}{1993}{{Kanungo et~al\mbox  {.}}}{{}}}
+\bibcite{karmanov_eclair_2025}{{16}{2025}{{Karmanov et~al\mbox  {.}}}{{}}}
+\bibcite{RN16}{{17}{2015}{{Kim et~al\mbox  {.}}}{{}}}
+\bibcite{koo2009composition}{{18}{2009}{{Koo et~al\mbox  {.}}}{{}}}
+\bibcite{levenshtein1966binary}{{19}{1966}{{Levenshtein et~al\mbox  {.}}}{{}}}
+\bibcite{li2023foreground}{{20}{2023b}{{Li et~al\mbox  {.}}}{{}}}
+\bibcite{li2023ladoc}{{21}{2023a}{{Li et~al\mbox  {.}}}{{}}}
+\bibcite{li2019document}{{22}{2019}{{Li et~al\mbox  {.}}}{{}}}
+\bibcite{li2025docsam}{{23}{2025}{{Li et~al\mbox  {.}}}{{}}}
+\bibcite{Li_2024_CVPR}{{24}{2024}{{Li et~al\mbox  {.}}}{{}}}
+\bibcite{RN19}{{25}{2008}{{Liang et~al\mbox  {.}}}{{}}}
+\bibcite{liu2010sift}{{26}{2010}{{Liu et~al\mbox  {.}}}{{}}}
+\bibcite{luo2024flowdiffuser}{{27}{2024}{{Luo et~al\mbox  {.}}}{{}}}
+\bibcite{RN58}{{28}{2022}{{Ma et~al\mbox  {.}}}{{}}}
+\bibcite{ma2018docunet}{{29}{2018}{{Ma et~al\mbox  {.}}}{{}}}
+\bibcite{markovitz2020can}{{30}{2020}{{Markovitz et~al\mbox  {.}}}{{}}}
+\bibcite{RN20}{{31}{2015}{{Meng et~al\mbox  {.}}}{{}}}
+\bibcite{RN18}{{32}{2018}{{Meng et~al\mbox  {.}}}{{}}}
+\bibcite{RN21}{{33}{2014}{{Meng et~al\mbox  {.}}}{{}}}
+\bibcite{nam_2024_diffmatch}{{34}{2024}{{Nam et~al\mbox  {.}}}{{}}}
+\bibcite{nassar_smoldocling_2025}{{35}{2025}{{Nassar et~al\mbox  {.}}}{{}}}
+\bibcite{Alexander_2020_ddim}{{36}{2021}{{Nichol and Dhariwal}}{{}}}
+\bibcite{Peebles_2023_dit}{{37}{2023}{{Peebles and Xie}}{{}}}
+\bibcite{qin_u2net_2020}{{38}{2020}{{Qin et~al\mbox  {.}}}{{}}}
+\bibcite{ravishankar_2024_scaling}{{39}{2024}{{Ravishankar et~al\mbox  {.}}}{{}}}
+\bibcite{pmlr-vae-2014}{{40}{2014}{{Rezende et~al\mbox  {.}}}{{}}}
+\bibcite{rombach2021highresolution}{{41}{2021}{{Rombach et~al\mbox  {.}}}{{}}}
+\bibcite{ronneberger_unet_2015}{{42}{2015}{{Ronneberger et~al\mbox  {.}}}{{}}}
+\bibcite{Scius_ocr_2024}{{43}{2024}{{Scius-Bertrand et~al\mbox  {.}}}{{}}}
+\bibcite{simonyan2014very}{{44}{2014}{{Simonyan and Zisserman}}{{}}}
+\bibcite{Song_2019_Generative}{{45}{2019}{{Song and Ermon}}{{}}}
+\bibcite{tan2005restoring}{{46}{2005}{{Tan et~al\mbox  {.}}}{{}}}
+\bibcite{tian2011rectification}{{47}{2011}{{Tian and Narasimhan}}{{}}}
+\bibcite{Tsoi_2007}{{48}{2007}{{Tsoi and Brown}}{{}}}
+\bibcite{Ulges_2004}{{49}{2004}{{Ulges et~al\mbox  {.}}}{{}}}
+\@writefile{toc}{\contentsline {section}{References}{11}{section*.24}\protected@file@percent }
+\bibcite{verhoeven2023neural}{{50}{2023}{{Verhoeven et~al\mbox  {.}}}{{}}}
+\bibcite{RN23}{{51}{1997}{{Wada et~al\mbox  {.}}}{{}}}
+\bibcite{wan_2024_multidetect}{{52}{2024}{{Wan et~al\mbox  {.}}}{{}}}
+\bibcite{msssim2003}{{53}{2003}{{Wang et~al\mbox  {.}}}{{}}}
+\bibcite{wei2024general}{{54}{2024}{{Wei et~al\mbox  {.}}}{{}}}
+\bibcite{xie2020dewarping}{{55}{2020}{{Xie et~al\mbox  {.}}}{{}}}
+\bibcite{xie2021document}{{56}{2021}{{Xie et~al\mbox  {.}}}{{}}}
+\bibcite{xue2022fourier}{{57}{2022}{{Xue et~al\mbox  {.}}}{{}}}
+\bibcite{yan2025gpt-imgeval}{{58}{2025}{{Yan et~al\mbox  {.}}}{{}}}
+\bibcite{RN11}{{59}{2017a}{{You et~al\mbox  {.}}}{{}}}
+\bibcite{ld2017}{{60}{2017b}{{You et~al\mbox  {.}}}{{}}}
+\bibcite{yu_docreal_2024}{{61}{2024}{{Yu et~al\mbox  {.}}}{{}}}
+\bibcite{jiaxin2022marior}{{62}{2022}{{Zhang et~al\mbox  {.}}}{{}}}
+\bibcite{zhang_2024_docres}{{63}{2024a}{{Zhang et~al\mbox  {.}}}{{}}}
+\bibcite{RN29}{{64}{2008}{{Zhang et~al\mbox  {.}}}{{}}}
+\bibcite{zhang2024reg}{{65}{2024b}{{Zhang et~al\mbox  {.}}}{{}}}
+\bibcite{zhang_2024_docregistration}{{66}{2024c}{{Zhang et~al\mbox  {.}}}{{}}}
+\bibcite{zhou_dochformer_2025}{{67}{2025}{{Zhou et~al\mbox  {.}}}{{}}}
+\newlabel{tocindent-1}{0pt}
+\newlabel{tocindent0}{0pt}
+\newlabel{tocindent1}{4.185pt}
+\newlabel{tocindent2}{10.34999pt}
+\newlabel{tocindent3}{18.198pt}
+\newlabel{tocindent4}{0pt}
+\newlabel{tocindent5}{0pt}
+\newlabel{TotPages}{{12}{12}{}{page.12}{}}
+\gdef \@abspage@last{12}
