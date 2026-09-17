@@ -1,0 +1,17 @@
+\section{相关工作}
+
+我们首先简要讨论可微渲染领域的相关研究，然后概述具身视觉导航的整体发展，最后重点介绍与我们工作最相关的实例图像目标导航(IIN)任务。
+
+\textbf{可微渲染。} 为实现真实感场景重建，随着神经辐射场(NeRF)\cite{mildenhall2020nerf}的提出，可微体渲染技术得到了广泛关注。NeRF使用单个多层感知机(MLP)表示场景，通过沿像素光线行进并查询MLP获取不透明度和颜色来执行体渲染。由于体渲染本身具有可微性，MLP表示可以利用多视图信息通过最小化渲染损失进行优化，从而实现高质量的新视角合成(NVS)。NeRF的主要局限性在于训练速度较慢。近期的研究通过引入显式体结构（如多分辨率体素网格\cite{fridovich2022plenoxels, liu2020neural, sun2022direct}和哈希函数\cite{muller2022instant}）来提升性能，解决了这一问题。
+
+与NeRF不同，三维高斯泼溅(3DGS)\cite{kerbl3Dgaussians}采用可微光栅化技术。与沿像素光线迭代的光线行进不同，3DGS对待光栅化的图元进行迭代，这与传统图形学光栅化方式类似。通过利用三维场景的天然稀疏性，3DGS实现了既能捕捉高保真三维场景又能显著提升渲染速度的表达能力。
+关于三维高斯泼溅技术发展的全面综述\cite{chen2024survey}强调了该方法的通用性及其在各个领域的应用。
+凭借这些优势，越来越多的研究开始探索各种创新方向，包括可变形或动态高斯\cite{luiten2023dynamic, wu20234dgaussians, yang2023deformable3dgs}、网格提取和物理模拟的进展\cite{feng2024gaussian,xie2023physgaussian,guedon2023sugar}，以及在同时定位与地图构建(SLAM)中的应用\cite{keetha2023splatam, matsuki2023gaussian, yugay2023gaussianslam}。对3DGS能力的广泛关注促使我们思考其在具身视觉导航中的潜力。鉴于高斯表示天然包含显式的场景几何信息和渲染所需的参数，我们认为3DGS能够增强基于地图的视觉导航中的决策能力。高斯表示的显式特性提供了丰富且紧凑的环境数据形式，可有效用于指导自主智能体的导航行为。
+
+\textbf{具身视觉导航。} 具身视觉导航包含多个研究方向：物体目标导航(ObjectNav)、多物体目标导航(MultiON)、图像目标导航(ImageNav)和实例图像目标导航(IIN)。物体目标导航\cite{majumdar2022zson, chaplot2020object, wang2024find, chang2020semantic, chaplot2021seal}要求智能体导航至环境中指定物体类别的任意实例。多物体目标导航\cite{chen2022learning, wani2020multion, schmalstieg2022learning, marza2023multi}则要求智能体依次导航至一系列物体。图像目标导航\cite{al2022zero, choi2021image, yadav2023ovrl, yadav2023offline, Kwon_2023_CVPR,Chaplot_2020_CVPR,savinov2018semi,TSGM, wasserman2022lastmile}涉及导航至拍摄目标图像的相机位姿。相比之下，实例图像目标导航\cite{krantz2023navigating, bono2023endtoend, lei2024instanceaware}要求导航至目标图像中相机所拍摄的特定实例。总体而言，这些导航任务涵盖了从ObjectNav和MultiON的语义级导航到ImageNav和IIN的细粒度实例级导航的完整范围，全面覆盖了具身视觉导航的问题空间。
+
+许多解决具身视觉导航的方法使用深度强化学习(DRL)开发端到端策略，将以自我为中心的视觉信息映射为动作\cite{al2022zero, majumdar2022zson, yadav2023offline, zhu2017target}。然而，在端到端框架中获取视觉场景理解、语义探索和长期记忆等技能具有挑战性。因此，这些方法通常结合精心设计的奖励塑造\cite{choi2021image}、预训练流程\cite{yadav2023offline}和先进的记忆模块\cite{savinov2018semi, mezghan2022memory, wu2019bayesian}。与端到端DRL不同，另一种方法将问题分解为可以以监督方式优化的子任务。这些子任务包括通过拓扑SLAM进行图预测\cite{Chaplot_2020_CVPR}、基于图的距离学习\cite{hahn2021no, shah2021rapid}以及用于最后一公里导航的相机位姿估计\cite{wasserman2022lastmile}。Chaplot等人\cite{chaplot2020object}将具身视觉导航任务分解为探索、物体检测和局部导航。在此基础上，"车轮上的CLIP"(CoW)\cite{gadre2023cows}采用了类似的分解策略，专注于探索和物体定位以处理开放集物体词汇。模块化方法在有效的仿真到现实迁移(Sim2Real)方面也显示出潜力。Gervet等人\cite{gervet2023navigating}对模块化系统和端到端系统进行了Sim2Real迁移实验，证明模块化能够有效缓解损害端到端策略性能的视觉Sim2Real差距。
+
+模块化方法通常使用地图表示环境，并利用该地图获取在该环境中导航所需的知识。鸟瞰图(BEV)地图\cite{liu2023bird, chaplot2020object, krantz2023navigating, lei2024instanceaware}是一种度量地图，它从俯视角度投影整个场景，表示特定区域的占用状态、探索状态和语义类别。这种地图表示将每个区域的信息编码到网格中，实现了精确的空间感知。相比之下，拓扑地图\cite{Chaplot_2020_CVPR, TSGM, Kwon_2023_CVPR}更侧重于描述场景中不同区域之间的空间关系。这种方法允许智能体基于空间的连通性进行导航，而不仅仅依赖几何坐标。为了更精细地表示场景，研究人员提出了三维感知地图\cite{chaplot2021seal, zhang20233d, tan2024self, liu2024volumetric}。引入三维一致性可以增强导航中的感知能力。在三维地图的基础上，我们进一步采用三维高斯泼溅(3DGS)\cite{kerbl3Dgaussians}作为一种新颖的地图表示。这使得地图能够合成特定物体实例的外观视图，我们已证明这在实例图像目标导航任务中是有效的。
+
+\textbf{实例图像目标导航。} 与图像目标导航相比，IIN任务带来了独特的挑战。首先，在IIN中，目标图像必须描绘一个特定的物体实例。而图像目标导航可以使用随机拍摄的照片，这些照片可能包含无关紧要的元素，例如大面积的白墙。其次，拍摄目标图像的相机参数不一定与智能体的相机参数匹配。因此，要在IIN任务中取得成功，智能体必须能够在众多与目标物体同属一类的候选物体中识别出目标物体，并能从各种视角识别它。为解决上述挑战，Krantz等人\cite{krantz2023navigating}开发了一个通用流水线，用于对齐不同视角下的同一物体。Bono等人\cite{bono2023endtoend}提出了一种端到端的IIN任务方法，而Lei等人\cite{lei2024instanceaware}提出了一种模仿人类远距离验证物体行为的方法。现有方法部分侧重于设计复杂的模块\cite{krantz2023navigating, lei2024instanceaware}，部分侧重于在前置任务上进行预训练\cite{bono2023endtoend}。我们的方法不同之处在于，我们专注于设计一种新的地图表示。通过这种新颖的地图形式，我们能够更好地建立目标描述与目标位置之间的联系，从而促进视觉导航。

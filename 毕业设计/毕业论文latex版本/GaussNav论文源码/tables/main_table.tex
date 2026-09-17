@@ -1,0 +1,36 @@
+
+\begin{table}[tb]
+  \centering
+  % Increase the padding of the columns
+  % \setlength{\tabcolsep}{16pt}
+  % Optionally, use a smaller font for the table
+  \small
+  \begin{tabular}{@{}l c c@{}}
+    \toprule
+    Method & Success~$\uparrow$ & SPL~$\uparrow$ \\
+    \midrule
+    RL Baseline \cite{krantz2022instancespecific} & 0.083 & 0.035  \\
+    OVRL-v2 ImageNav \cite{yadav2023ovrl} & 0.006 & 0.002 \\
+    OVRL-v2 IIN \cite{yadav2023ovrl} & 0.248 & 0.118 \\
+    FGPrompt \cite{sun2024fgprompt} & 0.099 & 0.028 \\
+    \midrule
+    MultiON Baseline \cite{wani2020multion} & 0.066 & 0.045 \\
+    MultiON Implicit \cite{marza2023multi} & 0.143 & 0.107 \\
+    MultiON Camera \cite{chen2022learning} & 0.186 & 0.142 \\
+    \midrule
+    Mod-IIN \cite{krantz2023navigating} & 0.561 & 0.233 \\
+    IEVE Mask RCNN \cite{lei2024instanceaware} & 0.684 & 0.241 \\
+    IEVE InternImage \cite{lei2024instanceaware} & 0.702 & 0.252 \\
+    \midrule
+    Mod-IIN \cite{krantz2023navigating} (Scene Map) & 0.563 & 0.323 \\
+    IEVE Mask RCNN \cite{lei2024instanceaware} (Scene Map) & 0.683 & 0.331 \\
+    IEVE InternImage \cite{lei2024instanceaware} (Scene Map) & 0.705 & 0.347 \\
+    \textbf{GaussNav (ours)} & \textbf{0.725} & \textbf{0.578}\\
+    \bottomrule
+  \end{tabular}
+  % \vspace{-10pt}
+  \vspace{5pt}
+  \caption{Performance comparison of our GaussNav with previous state-of-the-art methods on the HM3D \cite{yadav2023habitat} datasets across two different metrics: Success and SPL \cite{anderson2018evaluation}. The table is divided into four sections. The first section presents the results of end-to-end methods. The second section shows the transfer performance of MultiON-related methods on the IIN task. The third section includes the state-of-the-art methods on the IIN task. Finally, the fourth section aims to provide a fair comparison with GaussNav by replacing the episodic map used in these methods from the third section with a scene-specific map, allowing the agent to retain the map from the previous episode.}
+  \vspace{-18pt}
+  \label{tab:main}
+\end{table}

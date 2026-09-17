@@ -1,0 +1,327 @@
+% \PassOptionsToPackage{table}{xcolor}
+\documentclass[acmtog]{acmart} %review, anonymous
+\acmSubmissionID{1719}
+
+
+%\usepackage{seqsplit}
+%\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{bbding}
+\usepackage{soul}
+%\usepackage[table]{xcolor}
+%\usepackage{color}
+\usepackage{colortbl}
+%\soulregister{\cite}7 % 注册\cite命令
+%\soulregister{\citep}7 % 注册\citep命令
+%\soulregister{\citet}7 % 注册\citet命令
+%\soulregister{\ref}7 % 注册\ref命令
+%\soulregister{\pageref}7 % 注册\pageref命令
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{booktabs} % For formal tables
+
+% \pdfimageresolution=150
+
+
+
+
+% TOG prefers author-name bib system with square brackets
+\citestyle{acmauthoryear}
+%\setcitestyle{nosort,square} % nosort to allow for manual chronological ordering
+% \usepackage{tikz}
+% \usetikzlibrary{calc} % 启用坐标计算功能
+\usepackage{pifont}
+\usepackage{enumitem}
+%\usepackage{seqsplit}
+% \usepackage{cite}
+\usepackage[ruled]{algorithm2e} % For algorithms
+\usepackage{algorithmic} % For algorithmic environment
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\newcommand{\best}[1]{\textbf{#1}}
+\newcommand{\second}[1]{\underline{#1}}
+\newcommand{\third}[1]{\textit{#1}}
+%\renewcommand\footnotetextcopyrightpermission[1]{} 
+% \settopmatter{printacmref=false} %remove ACM reference format
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+
+% Metadata Information
+\acmJournal{TOG} %页眉显式投稿期刊
+% \acmVolume{38}
+% \acmNumber{4}
+% \acmArticle{39}
+% \acmYear{2019}
+% \acmMonth{7}
+
+% Copyright
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+% DOI
+%\acmDOI{0000001.0000001_2}
+
+
+
+% Document starts
+\begin{document}
+% Title portion
+\title{%\includegraphics[width=0.018\textwidth]{2222.pdf}
+DvD: Unleashing a Generative Paradigm for Document Dewarping via 
+Coordinates-based Diffusion Model}
+% \settopmatter{printacmref=false}
+
+% DO NOT ENTER AUTHOR INFORMATION FOR ANONYMOUS TECHNICAL PAPER SUBMISSIONS TO SIGGRAPH 2019!
+\author{Weiguang Zhang}
+% \authornote{1}
+\orcid{0009-0005-8783-0326}
+\affiliation{
+\institution{Xi'an Jiaotong-Liverpool University} 
+\city{Suzhou}
+\postcode{215123}
+\country{China}
+}
+\affiliation{
+\institution{University of Liverpool}
+\city{Liverpool}
+\country{United Kingdom}
+}
+\email{Weiguang.Zhang21@student.xjtlu.edu.cn}
+
+\author{Huangcheng Lu} 
+\orcid{0009-0002-9808-8823}
+\affiliation{
+\institution{Xi'an Jiaotong-Liverpool University} 
+\city{Suzhou}
+\postcode{215123}
+\country{China}
+}
+\affiliation{
+\institution{University of Liverpool}
+\city{Liverpool}
+\country{United Kingdom}
+}
+\email{huangcheng.lu22@student.xjtlu.edu.cn}
+
+\author{Maizhen Ning} 
+\orcid{0000-0002-8842-4187}
+\affiliation{
+\institution{Xi'an Jiaotong-Liverpool University} 
+\city{Suzhou}
+\postcode{215123}
+\country{China}
+}
+\affiliation{
+\institution{University of Liverpool}
+\city{Liverpool}
+\country{United Kingdom}
+}
+\email{maizhen.ning16@student.xjtlu.edu.cn}
+\author{Xiaowei Huang} 
+\orcid{0000-0001-6267-0366}
+\affiliation{
+ \institution{University of Liverpool}
+ \city{Liverpool}
+ \country{United Kingdom}
+}
+% \email{Xiaowei.Huang@liverpool.ac.uk}
+
+\author{Wei Wang} 
+\orcid{0000-0002-0707-8076}
+\affiliation{
+ \institution{Xi'an Jiaotong-Liverpool University}
+ \city{Suzhou}
+ \postcode{215123}
+ \country{China}}
+% \email{Wei.Wang03@xjtlu.edu.cn}
+
+\author{Kaizhu Huang}
+\orcid{0000-0002-3034-9639}
+\affiliation{
+ \institution{Duke Kunshan University}
+ \city{Suzhou}
+ \postcode{215316}
+ \country{China}}
+% \email{kaizhu.huang@dukekunshan.edu.cn}
+
+\author{Qiufeng Wang\textsuperscript{†}}
+% \authornotemark[1]
+\authorsaddresses{† Corresponding author: Qiufeng Wang, \href{mailto:Qiufeng Wang}{Qiufeng.Wang@xjtlu.edu.cn}}
+\orcid{0000-0002-0918-4606}
+\affiliation{
+ \institution{Xi'an Jiaotong-Liverpool University}
+ \city{Suzhou}
+ \postcode{215123}
+ \country{China}}
+\email{Qiufeng.Wang@xjtlu.edu.cn}
+
+\renewcommand\shortauthors{Zhang, W. et al}
+
+
+\begin{abstract}
+Document dewarping aims to rectify deformations in photographic document images, thus improving text readability, which has attracted much attention and made great progress, but it is still challenging to preserve document structures. Given recent advances in diffusion models, it is natural for us to consider their potential applicability to document dewarping. However, it is far from straightforward to adopt diffusion models in document dewarping due to their unfaithful control on highly complex document images (e.g., 2000$\times$3000 resolution). 
+In this paper, we propose DvD, the first generative model to tackle document \textbf{D}ewarping \textbf{v}ia a \textbf{D}iffusion framework. To be specific, DvD introduces a coordinate-level denoising instead of typical pixel-level denoising, generating a mapping for deformation rectification. In addition, we further propose a time-variant condition refinement mechanism to enhance the preservation of document structures. In experiments, we find that current document dewarping benchmarks can not evaluate dewarping models comprehensively. To this end, we present AnyPhotoDoc6300, a rigorously designed large-scale document dewarping benchmark comprising 6,300 real image pairs across three distinct domains, enabling fine-grained evaluation of dewarping models. Comprehensive experiments demonstrate that our proposed DvD can achieve state-of-the-art performance with acceptable computational efficiency on multiple metrics across various benchmarks, including DocUNet, DIR300, and AnyPhotoDoc6300. The new benchmark and code will be publicly available at https://github.com/hanquansanren/DvD. 
+
+%Document dewarping, aiming to improve text readability through restoring a flat document from a casual photographic document, has commonly been approached by a mapping regression paradigm in the age of deep learning. 
+%Despite notable advancements, their intrinsic discriminative nature lacks the capacity to explicitly capture the underlying mapping distribution, resulting in imprecise structural preservation.
+%On the other hand, generative models, epitomized by diffusion models, are proficient in capturing more comprehensive probability distributions and thus provide a promising solution; however, their high computational cost (e.g., 2000$\times$3000 resolution) and unfaithful controllability limit their feasibility.
+%To overcome these constraints, we present DvD, the first generative model to tackle document \textbf{D}ewarping \textbf{v}ia a coordinates-based \textbf{D}iffusion framework. 
+%Unlike the costly pixel-level denoising manner adopted by typical diffusion models, DvD introduces a coordinate-level denoising to generate a mapping for dewarping, avoiding the difficulty of directly generating dewarped documents.
+%To enhance the structural preservation, we further propose a time-variant condition refinement mechanism that dynamically leverages intermediate dewarping results as guidance.
+
+%Additionally, existing publicly available document dewarping benchmarks suffer from three critical limitations that lead to evaluation ambiguity, including restricted dataset scale, narrow scenario coverage, and deficient domain annotations. Therefore, we present AnyPhotoDoc6300, a meticulously curated large-scale benchmark comprising 6,300 image pairs across three distinct real-world domains, enabling fine-grained dewarping evaluation.
+%Comprehensive experiments demonstrate that DvD outperforms state-of-the-art across DocUNet, DIR300, and AnyPhotoDoc6300 benchmarks with acceptable computational efficiency.
+\end{abstract}
+
+
+% specifically designed for document dewarping
+% thereby improving performance across various scenarios. 
+% result in normal pixel-based diffusion high computationl cost. 
+% we present DvD, the first generative model to tackle document \textbf{D}ewarping \textbf{v}ia a coordinates-based \textbf{D}iffusion framework, addressing two critical limitations: imprecise structural preservation for document content and poor generalization in real-world scenarios. 
+% Unlike the contemporary regression-based or image translation paradigm, DvD introduces a "Noise-to-Flow" generative paradigm. 
+% Guided by time-variant condition refinement mechanism, we employ a coordinate-space denoising to progressively generate latent variables to characterize warping flow.
+
+
+
+% To fairly evaluate the generalization inherited from the diffusion model, we construct AnyPhotoDoc6300, a well-organized benchmark spanning 3 real-world domains with 6,300 image pairs, addressing domain entanglement in current benchmarks. 
+% Additionally, we pioneer multimodal large language models (MLLMs) based optical character recognition (OCR) metrics (i.e.,~MMCER/MMED) to assess the necessity of dewarping for recently emerging MLLMs. 
+% Comprehensive experiments demonstrate that DvD outperforms state-of-the-art across mainstream and AnyPhotoDoc6300 benchmarks, with ablation studies revealing component efficacy and acceptable computational efficiency.
+
+% Our work establishes the viability of generative paradigms for geometric rectification tasks and provides insights into deformation distribution learning.
+% We also introduce a time-variant condition refinement mechanism that dynamically incorporates intermediate dewarping results as guidance.
+% Such a paradigm enables DvD to bypass the costly pixel-level diffusion while fostering deformation-aware modeling, thus improving structural preservation. 
+
+
+
+
+% Document dewarping aims to rectify deformations in photographic document images, thus improving text readability, which has attracted much attention and made great progress, but it is still challenging to preserve document structures. Given recent advances in diffusion models, it is natural for us to consider their potential applicability to document dewarping. However, it is far from straightforward to adopt diffusion models in document dewarping due to their unfaithful control on highly complex document images (e.g., 2000$\times$3000 resolution). 
+% In this paper, we propose DvD, the first generative model to tackle document Dewarping via a Diffusion framework. To be specific, DvD introduces a coordinate-level denoising instead of typical pixel-level denoising, generating a mapping for deformation rectification. In addition, we further propose a time-variant condition refinement mechanism to enhance the preservation of document structures. In experiments, we find that current document dewarping benchmarks can not evaluate dewarping models comprehensively. To this end, we present AnyPhotoDoc6300, a rigorously designed large-scale document dewarping benchmark comprising 6,300 real image pairs across three distinct domains, enabling fine-grained evaluation of dewarping models. Comprehensive experiments demonstrate that our proposed DvD can achieve state-of-the-art performance with acceptable computational efficiency on multiple metrics across various benchmarks including DocUNet, DIR300, and AnyPhotoDoc6300. The new benchmark and code will be publicly available. 
+
+
+
+
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below.
+%
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10010405.10010497.10010504.10010505</concept_id>
+       <concept_desc>Applied computing~Document analysis</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10010405.10010497.10010504.10010508</concept_id>
+       <concept_desc>Applied computing~Optical character recognition</concept_desc>
+       <concept_significance>300</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10010405.10010497.10010504.10010506</concept_id>
+       <concept_desc>Applied computing~Document scanning</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10010147.10010371.10010382.10010383</concept_id>
+       <concept_desc>Computing methodologies~Image processing</concept_desc>
+       <concept_significance>300</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Applied computing~Document analysis}
+\ccsdesc[300]{Applied computing~Optical character recognition}
+\ccsdesc[500]{Applied computing~Document scanning}
+\ccsdesc[300]{Computing methodologies~Image processing}
+
+
+% \begin{teaserfigure}
+% 	\includegraphics[width=0.9\textwidth]{figures2/head2.pdf} %scale=0.52
+% 	\centering
+% 	\caption{
+% 		Comparing results of different image registration methods (TransMorph~\cite{chen_transmorph_2022}, DKM~\cite{edstedt2023dkm},   DocAligner~\cite{zhang_docaligner_2023}) where we output the dewarping results based on the obtained pixel-level alignments. Since TransMorph and DKM are originally proposed for general images, we re-trained them on document datasets for fair comparison and specified by the symbol "*". Red dotted dashes highlight some poor results in text blocks.
+% 	}%edstedt2023dkm
+% 	\label{fig:head_image}
+% \end{teaserfigure}
+
+
+
+\keywords{Photographic Documents Images, Document Unwarping, Document Dewarping, Diffusion Model, Optical Character Recognition, Generative AI}
+
+
+
+\maketitle
+
+\input{samplebody-journals}
+% \input{app}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Photographic document dewarping, which aims at rectifying geometric deformation and thereby obtaining a flat document to benefit optical character recognition (OCR), has made notable progress recently but is still far from being solved. 
+% Unlike existing state-of-the-art discriminative paradigms that directly model conditional probabilities via pixel-wise regression, we present \textbf{DocPro}, the first generative paradigm that formulates a conditional denoising diffusion \textbf{Pro}babilistic framework to solve \textbf{Doc}ument dewarping task by progressively generating warping flow from Gaussian noise. Concretely, our DocPro offers three distinctive properties while demonstrating corresponding task-specific adaptability:
+% (1) More elaborate task modeling: By introducing latent variables, DocPro models the task as an elaborate conditional likelihood learning, where we incorporate a time-variant condition refinement mechanism for efficient optimization. 
+% (2) Multi-modal distribution learning: Breaking free from the uni-modal distribution assumption, DocPro inherently allows multi-modal distribution learning for warping flow. To evaluate this property, we contribute AnyPhotoDoc7000, a large-scale cross-modality benchmark meticulously organized across five critical modalities.
+% % Additionally, we pioneer an exploration about whether document dewarping is still useful for OCR using multimodal large-language models(MLLMs), with proposed MMCER (MLLMs-based Character Error Rate) and MMED (MLLMs-based Edit Distance) serving as specialized supplements to previous OCR metrics.
+% Comprehensive experiments demonstrate that DocPro outperforms state-of-the-art discriminative paradigms across three mainstream and AnyPhotoDoc7000 benchmarks, with ablation studies revealing component efficacy and acceptable computational efficiency.
+
+
+
+
+
+
+
+
+
+% (3) Sampling flexibility: DocPro enables multiple sampling candidates from the learned manifold of warping flow. Benefiting from this property, DocPro provides a training-free post-processing module for optimal sample selection in template-based dewarping.
+% Additionally, we identify and analyze the flaws of commonly used OCR engines that are less robust and versatile to capricious modality; therefore we propose to replace them with multimodal large language models (MLLMs) to obtain a more  
+% existing methods rely on OCR engines for CER/ED evaluation metrics but face robustness limitations across modalities; we propose replacing them with multimodal large language models (MLLMs) to improve measurement reliability in document assessment.
+% This paper presents DocPro, a generative diffusion paradigm that fundamentally rethinks document dewarping through three key innovations: (1) A conditional denoising framework enabling multi-modal warping flow distribution estimation, overcoming the limitations of deterministic regression; (2) A time-variant condition refinement mechanism optimizing evidence lower bound through dynamic KL divergence reduction; (3) A training-free template scoring strategy leveraging diffusion models' sampling flexibility for optimal warping flow selection. 
+%misaligned document content and redundant backgrounds, 
+% enhances step-wise task modeling;
+% (2) a plug-and-play post-processing module that leverages a scoring strategy to select the optimal sample in template-based dewarping scene. See Sect.~\ref{sec:method33}.
+% and (3) it provides sampling flexibility that enables the generation of multiple plausible dewarping solutions.
+% \item We contribute AnyPhotoDoc7000, the most comprehensive document dewarping benchmark up to now. It contains 7,000 real-world photographic documents, enabling thorough evaluation across 5 critical dimensions: text density, warping pattern, environment lighting, capture angles, and interfering factors. See Sect.~\ref{sec:data}.
+% \item We also propose a new pair of OCR metrics, MMCER and MMED, based on the current state-of-the-art MLLMs, to measure whether document dewarping is still helpful for the document content perception of multimodal large models. See Sect.~\ref{sec:exp}.
+% \item Extensive experiments demonstrate state-of-the-art dewarping performance as well as the effectiveness of each component in our DocPro. See Sect.~\ref{sec:exp}.
+% Visual comparison and quantitative experiments demonstrate state-of-the-art performance in two mainstream metrics, with ablation studies revealing component efficacy and acceptable computational efficiency.
+
+
+
+% Our anonymous demo is available at \url{ https://github.com/afdgasggx/demo_link}.

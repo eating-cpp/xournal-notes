@@ -1,0 +1,111 @@
+\documentclass[lettersize,journal]{IEEEtran}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{cite}
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+
+
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{xcolor}         % colors
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{booktabs}
+% \usepackage[style=numeric]{biblatex}
+% \usepackage[numbers]{natbib}
+\newcommand{\etal}{\textit{et al.}}
+
+
+\definecolor{MyGreen}{RGB}{0, 128, 0}
+
+
+% updated with editorial comments 8/9/2021
+
+\begin{document}
+
+\title{GaussNav：面向视觉导航的3D高斯泼溅技术}
+
+\author{雷晓涵，王敏，周文刚，~\IEEEmembership{IEEE高级会员}，李厚强，~\IEEEmembership{IEEE会士}
+        % <-this % stops a space
+\thanks{
+本研究得到国家自然科学基金（项目编号62472141）、目标认知与应用技术重点实验室（项目编号2023-CXPT-LC-005）以及中国科学院青年创新促进会的资助。同时，本研究也得到了中国科学技术大学信息科学技术学院MCC实验室搭建的GPU集群和中国科学技术大学超级计算中心的支持。（*通讯作者：王敏、周文刚）
+
+雷晓涵、周文刚和李厚强任职于中国科学技术大学脑启发智能感知与认知教育部重点实验室，合肥230027（电子邮箱：leixh@mail.ustc.edu.cn；zhwg@ustc.edu.cn；lihq@ustc.edu.cn）。
+王敏任职于合肥综合性国家科学中心人工智能研究院，合肥230031（电子邮箱：wangmin@iai.ustc.edu.cn）。}% <-this % stops a space
+% \thanks{Manuscript received April 19, 2021; revised August 16, 2021.}
+}
+
+% The paper headers
+\markboth{IEEE模式分析与机器智能汇刊}
+{IEEE模式分析与机器智能汇刊}
+
+% \IEEEpubid{0000--0000/00\$00.00~\copyright~2021 IEEE}
+
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+\maketitle
+
+\begin{abstract}
+在具身视觉领域，实例图像目标导航（Instance ImageGoal Navigation, IIN）要求智能体在未知环境中定位目标图像所描绘的特定物体。IIN任务的核心挑战在于，智能体需要在不同视角下识别目标物体，同时忽略潜在的干扰物。现有的基于地图的导航方法通常使用鸟瞰图（Bird's Eye View, BEV）地图，这类地图缺乏场景的精细纹理表示。因此，尽管BEV地图在语义级视觉导航任务中表现出色，但在实例级任务中却难以胜任。
+
+为此，我们提出了一种全新的IIN任务框架——面向视觉导航的3D高斯泼溅技术（Gaussian Splatting for Visual Navigation, GaussNav），该框架基于3D高斯泼溅（3D Gaussian Splatting, 3DGS）构建了一种新颖的地图表示形式。GaussNav框架使智能体能够同时记忆场景的几何信息和语义信息，并保留物体的纹理特征。
+
+通过将相似物体的渲染结果与目标图像进行匹配，智能体可以准确地识别、定位并导航至指定物体。我们的GaussNav框架实现了显著的性能提升，在极具挑战性的Habitat-Matterport 3D（HM3D）数据集上，路径长度加权成功率（Success weighted by Path Length, SPL）从0.347提升至0.578。源代码已公开发布于：\url{https://github.com/XiaohanLei/GaussNav}。
+\end{abstract}
+
+\begin{IEEEkeywords}
+具身视觉导航，3D高斯泼溅。
+\end{IEEEkeywords}
+
+\input{sections/intruduction}
+\input{sections/related_work}
+\input{sections/methods}
+\input{sections/experiments}
+\input{sections/conclusion}
+
+
+{\small
+\bibliographystyle{IEEEtran}
+\bibliography{main}
+}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pics/xiaohanlei.jpg}}]{雷晓涵}
+目前正在中国科学技术大学信息科学技术学院攻读信息与通信工程专业博士学位。
+
+他的研究兴趣包括具身视觉导航、机器人操作和具身计算机视觉。
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pics/minwang.jpg}}]{王敏}
+分别于2014年和2019年在中国科学技术大学获得电子信息工程专业学士学位和博士学位。现任职于合肥综合性国家科学中心人工智能研究院。
+
+她目前的研究兴趣包括二进制哈希、多媒体信息检索和计算机视觉。
+\end{IEEEbiography}
+
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pics/wengangzhou.jpg}}]{周文刚}
+2006年于武汉大学获得电子信息工程专业学士学位，2011年于中国科学技术大学获得电子工程与信息科学专业博士学位。2011年9月至2013年9月，在德克萨斯大学圣安东尼奥分校计算机科学系从事博士后研究。现任中国科学技术大学电子工程与信息科学系教授。
+
+他的研究兴趣包括多媒体信息检索、计算机视觉和计算机游戏。在这些领域，他已在IEEE/ACM汇刊和CCF A类国际会议上发表论文100余篇。他是2018年国家自然科学基金优秀青年科学基金获得者，2024年中国图象图形学学会青年科学家奖获得者。他曾获2012年ICIMCS最佳论文奖，2021年中国图象图形学学会优秀博士导师奖，2022年中国科学院优秀博士导师奖。2021年荣获吴文俊人工智能科学技术进步奖一等奖。他曾担任2021年IEEE ICME出版主席，并获2021年ICME杰出服务奖。现任IEEE Transactions on Multimedia副主编和首席客座编辑，并获2023年IEEE Transactions on Multimedia（TMM）杰出编辑奖。
+\end{IEEEbiography}
+
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{pics/houqiangli.png}}]{李厚强}
+（S’12, F’21）分别于1992年、1997年和2000年在中国科学技术大学获得电子工程专业学士学位、硕士学位和博士学位。2021年当选为IEEE会士，现任中国科学技术大学电子工程与信息科学系教授。
+
+他的研究兴趣包括强化学习、多媒体搜索、图像/视频分析、视频编码与通信等。他已在期刊和会议上发表论文200余篇。他是国家自然科学基金杰出青年科学基金获得者、长江学者奖励计划特聘教授、国家"万人计划"科技创新领军人才。他现任IEEE TMM副主编，并曾担任IEEE TCSVT副主编。他曾担任2021年ICME大会共同主席和2010年VCIP程序委员会共同主席。他曾获2019年国家技术发明奖二等奖、2015年国家自然科学奖二等奖。他曾获2012年VCIP最佳论文奖、2012年ICIMCS最佳论文奖和2011年ACM MUM最佳论文奖。
+\end{IEEEbiography}
+
+
+\end{document}

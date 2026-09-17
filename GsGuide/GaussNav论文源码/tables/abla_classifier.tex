@@ -1,0 +1,86 @@
+% \begin{table*}[tb]
+%     \centering
+%     % \begin{tabular}{|l|c|c|c|c|c|c|c|}
+%     % \small
+%     \begin{tabular}{lcccccccc}
+%         \hline
+%         Method & Metric & Chair & Sofa & Plant & Bed & Toilet & TV & Total \\
+%         \hline
+%         \multirow{2}{*}{\textbf{w.o.} classifier} & Success $\uparrow$ & \textbf{0.821} & \textbf{0.873} & 0.798 & \textbf{0.914} & \textbf{0.936} & 0.829 & \textbf{0.840} \\
+%         \cline{2-9}
+%         & Time (s) $\downarrow$ & 30.9 & 24.8 & 33.2 & 18.1 & 24.6 & 31.9 & 29.0 \\
+%         \hline
+%         \multirow{2}{*}{\textbf{w}. classifier} & Success $\uparrow$ & 0.782 & 0.859 & \textbf{0.854} & 0.878 & 0.702 & \textbf{0.847} & 0.811 \\
+%         \cline{2-9}
+%         & Time (s) $\downarrow$ & \textbf{15.7} & \textbf{8.09} & \textbf{11.6} & \textbf{5.97} & \textbf{1.85} & \textbf{2.74} & \textbf{11.5}  \\
+%         \hline
+%     \end{tabular}
+%     \caption{Results of matching success and time taken with or without classifier.}
+%     \vspace{-12pt}
+%     \label{tab:abla_classifier}
+% \end{table*}
+
+% \begin{table}[tb]
+%     \centering
+%     \small % Reduce font size
+%     \setlength{\tabcolsep}{3pt} % Adjust column spacing (default is 6pt)
+%     \begin{tabular}{lccccccc}
+%         \hline
+%         Method & Metric & Ch. & So. & Pl. & Bed & Tol. & TV \\
+%         \hline
+%         \multirow{2}{*}{\textbf{w.o.} clf} & Success $\uparrow$ & \textbf{0.821} & \textbf{0.873} & 0.798 & \textbf{0.914} & \textbf{0.936} & 0.829 \\
+%         \cline{2-8}
+%         & Time (s) $\downarrow$ & 30.9 & 24.8 & 33.2 & 18.1 & 24.6 & 31.9 \\
+%         \hline
+%         \multirow{2}{*}{\textbf{w}. clf} & Success $\uparrow$ & 0.782 & 0.859 & \textbf{0.854} & 0.878 & 0.702 & \textbf{0.847} \\
+%         \cline{2-8}
+%         & Time (s) $\downarrow$ & \textbf{15.7} & \textbf{8.09} & \textbf{11.6} & \textbf{5.97} & \textbf{1.85} & \textbf{2.74}  \\
+%         \hline
+%     \end{tabular}
+%     \caption{Results of matching success and time taken with or without classifier.}
+%     \label{tab:abla_classifier}
+% \end{table}
+
+\begin{table}[tb]
+    \centering
+    \small % Reduce font size
+    \renewcommand{\arraystretch}{1.2} % Adjust row spacing (default is 1.0)
+    \setlength{\tabcolsep}{3pt} % Adjust column spacing (default is 6pt)
+    \begin{tabular}{lccccccc}
+        \hline
+        Method & Metric & Ch. & So. & Pl. & Bed & Tol. & TV \\
+        \hline
+        \multirow{2}{*}{\textbf{w.o.} clf} & Success $\uparrow$ & \textbf{0.821} & \textbf{0.873} & 0.798 & \textbf{0.914} & \textbf{0.936} & 0.829 \\
+        \cline{2-8}
+        & Time (s) $\downarrow$ & 30.9 & 24.8 & 33.2 & 18.1 & 24.6 & 31.9 \\
+        \hline
+        \multirow{2}{*}{\textbf{w}. clf} & Success $\uparrow$ & 0.782 & 0.859 & \textbf{0.854} & 0.878 & 0.702 & \textbf{0.847} \\
+        \cline{2-8}
+        & Time (s) $\downarrow$ & \textbf{15.7} & \textbf{8.09} & \textbf{11.6} & \textbf{5.97} & \textbf{1.85} & \textbf{2.74}  \\
+        \hline
+    \end{tabular}
+    \vspace{5pt}
+    \caption{Results of matching success and time taken with or without classifier.(Abbreviations: clf = classifier, Ch. = Chair, So. = Sofa, Pl. = Plant, Tol. = Toilet)}
+    \vspace{-24pt}
+    \label{tab:abla_classifier}
+\end{table}
+
+% \begin{table*}[b] % The [b] option places the table at the bottom of the page
+%     \centering
+%     \begin{tabular}{lcccccccc}
+%         \hline
+%         Method & Metric & Chair & Sofa & Plant & Bed & Toilet & TV & Total \\
+%         \hline
+%         \multirow{2}{*}{\textbf{w.o.} classifier} & Success $\uparrow$ & \textbf{0.821} & \textbf{0.873} & 0.798 & \textbf{0.914} & \textbf{0.936} & 0.829 & \textbf{0.840} \\
+%         \cline{2-9}
+%         & Time (s) $\downarrow$ & 30.9 & 24.8 & 33.2 & 18.1 & 24.6 & 31.9 & 29.0 \\
+%         \hline
+%         \multirow{2}{*}{\textbf{w}. classifier} & Success $\uparrow$ & 0.782 & 0.859 & \textbf{0.854} & 0.878 & 0.702 & \textbf{0.847} & 0.811 \\
+%         \cline{2-9}
+%         & Time (s) $\downarrow$ & \textbf{15.7} & \textbf{8.09} & \textbf{11.6} & \textbf{5.97} & \textbf{1.85} & \textbf{2.74} & \textbf{11.5}  \\
+%         \hline
+%     \end{tabular}
+%     \caption{Results of matching success and time taken with or without classifier.}
+%     \label{tab:abla_classifier}
+% \end{table*}
+

@@ -1,0 +1,26 @@
+\begin{table}[tb]
+  \centering
+  % Increase the padding of the columns
+  % \setlength{\tabcolsep}{16pt}
+  % Optionally, use a smaller font for the table
+  \small
+  \begin{tabular}{@{}l c c@{}}
+    \toprule
+    Ablations & Success~$\uparrow$ & SPL~$\uparrow$ \\
+    \midrule
+    GaussNav & 0.725 & 0.578  \\
+    GaussNav w.o. Classifier & 0.375 & 0.291 \\
+    GaussNav w.o. Match & 0.444 & 0.353 \\
+    GaussNav w.o. NVS & 0.716 & 0.557 \\
+    GaussNav w. SIFT & 0.655 & 0.519 \\
+    GaussNav w. GlueStick \cite{pautrat_suarez_2023_gluestick} & 0.723 & 0.577 \\
+    GaussNav w. GT Match & 0.850 & 0.672 \\ 
+    GaussNav w. GT Goal Localization & 0.946 & 0.744 \\
+    \bottomrule
+  \end{tabular}
+  % \vspace{-10pt}
+  \vspace{5pt}
+  \caption{Ablation study of GaussNav. We study the impact of Classifier, Match module, novel view synthesis (NVS) and different local feature extraction and matching algorithms on our GaussNav. The last two rows describe the performance of our method using ground truth match results and goal position.}  
+  \vspace{-14pt}
+  \label{tab:ablations}
+\end{table}

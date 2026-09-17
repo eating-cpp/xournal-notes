@@ -1,0 +1,19 @@
+\begin{table}[tb]
+    \centering
+    \vspace{5pt}
+    \begin{tabular}{l c c c c c}
+        \toprule
+         Method & Ver. NVS & Hor. NVS & GT & Success~$\uparrow$ & SPL~$\uparrow$  \\
+         \midrule
+         IEVE~\cite{lei2024instanceaware} & - & - & - & 0.702 & 0.252 \\
+         GaussNav (ours) & $\checkmark$ & $\times$ & $\times$ & 0.713 & 0.259 \\
+         GaussNav (ours) & $\times$ & $\checkmark$ & $\times$ & 0.715 & 0.261 \\
+         GaussNav (ours) & $\checkmark$ & $\checkmark$ & $\times$ & 0.723 & 0.265 \\
+         GaussNav (ours) & $\checkmark$ & $\checkmark$ & $\checkmark$ & 0.747 & 0.289 \\
+         \bottomrule
+    \end{tabular}
+    \vspace{-1pt}
+    \caption{Performance Comparison of IEVE~\cite{lei2024instanceaware} and GaussNav. We compare GaussNav with the state-of-the-art method IEVE using different map representations. (Abbreviations: Ver. = Vertical, Hor. = Horizontal)}
+    \vspace{-30pt}
+    \label{tab:pre-exploration}
+\end{table}
